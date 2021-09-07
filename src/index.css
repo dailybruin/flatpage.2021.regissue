@@ -1,0 +1,507 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  background: linear-gradient(180deg, #f2d851 0%, #fac390 50.52%, #ffb5b5 100%);
+  background-attachment: fixed;
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    background: linear-gradient(
+      180deg,
+      #f2d851 0%,
+      #fac390 50.52%,
+      #ffb5b5 100%
+    );
+    background-attachment: local;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.ReactModal__Overlay {
+  z-index: 2003 !important;
+}
+
+.leaflet-container {
+  overflow: hidden;
+  height: 100%;
+}
+.answer_box {
+  position: relative;
+  border: 2px solid black;
+  background: #ffb5b5;
+  text-align: center;
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  width: 80%;
+  height: 45%;
+  margin: auto;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+}
+.answer_box::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+.answer_box::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: gray;
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+.ReactModal__Overlay {
+  z-index: 2003 !important;
+}
+.wrong_answer_box {
+  position: relative;
+  border: 2px solid black;
+  background: #ffb5b5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+}
+.Close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+  border: 2px solid black;
+  border-top: none;
+  border-right: none;
+  background: #f2d851;
+}
+.Close:hover {
+  background: #ffb5b5;
+}
+.NextButton {
+  width: 30%;
+  height: 5vh;
+  border: 2px solid black;
+  background: #f2d851;
+  cursor: pointer;
+  float: right;
+  margin-right: 10%;
+  margin-top: 10%;
+}
+.NextButton:hover {
+  background: #ffb5b5;
+}
+.PrevButton {
+  width: 30%;
+  height: 5vh;
+  border: 2px solid black;
+  background: #f2d851;
+  cursor: pointer;
+  float: left;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.PrevButton:hover {
+  background: #ffb5b5;
+}
+.StartButton {
+  position: relative;
+  border: 2px solid black;
+  background: #f2d851;
+  cursor: pointer;
+}
+.StartButton:hover {
+  background: #ffb5b5;
+}
+.Postcard {
+  position: relative;
+  cursor: pointer;
+}
+#answer {
+  position: absolute;
+  text-align: center;
+}
+.byLine {
+  margin: 0px;
+  margin-bottom: 10px;
+  color: gray;
+  font-family: Karla;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  z-index: 2;
+}
+.byLineAdvice {
+  position: absolute;
+  margin: 0px;
+  margin-bottom: 10px;
+  right: 20%;
+  left: 20%;
+  color: gray;
+  font-family: Karla;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  z-index: 5;
+}
+.FullscreenButton {
+  border: 2px solid black;
+  background: #f2d851;
+  cursor: pointer;
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+}
+.FullscreenButton:hover {
+  background: #ffb5b5;
+}
+.map-border {
+  height: 100%;
+  border: 2px solid black;
+}
+
+/*Desktop CSS*/
+@media (min-width: 800px) {
+  .slideBox {
+    width: 65%;
+    margin: auto;
+  }
+  .FullscreenButton {
+    position: relative;
+    float: right;
+    bottom: 50px;
+    height: 30px;
+    margin: 0vh;
+  }
+  .each-slide > div {
+    height: 0;
+    overflow: hidden;
+    padding-top: calc(3864 / 6284 * 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+  }
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .rectangle {
+    height: 100%;
+    float: right;
+    text-align: center;
+    border: 2px solid black;
+    background: #f2d851;
+  }
+  .QuestionNumber {
+    justify-content: center;
+    margin: auto;
+    border-bottom: 2px solid black;
+    background: #ffb5b5;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+  }
+  .InstructionBox {
+    position: relative;
+    border: 2px solid black;
+    background: #ffb5b5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    height: 40vh;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+  }
+  .QuestionBox {
+    position: relative;
+    border: 2px solid black;
+    background: #ffb5b5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    height: 20%;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    overflow-y: auto;
+  }
+  .wrong_answer_box {
+    width: 80%;
+    margin: auto;
+    height: 45%;
+  }
+  .wrongAnswerText {
+    width: 90%;
+  }
+  .hiddenDiv {
+    width: 80%;
+    margin: auto;
+    border: 2px solid black;
+    height: 45%;
+    visibility: hidden;
+  }
+  .StartButton {
+    width: 30%;
+    height: 5vh;
+    margin: auto;
+  }
+  .Postcard {
+    width: 80%;
+    height: 18vh;
+    top: -1vh;
+  }
+  .answerText {
+    font-family: 'Karla', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    width: 90%;
+    margin: auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+  .JanssNote {
+    font-family: 'Karla', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    width: 90%;
+    margin: auto;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+  #question {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    font-family: 'Karla', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+  }
+  #answer {
+    top: 30%;
+  }
+  #button-text {
+    margin: auto;
+  }
+  .trivia-container {
+    height: 78vh;
+  }
+  .map-container {
+    width: 70%;
+    float: left;
+    height: 75vh;
+  }
+  .map-border {
+    border-right: none;
+  }
+  .sidebar {
+    width: 30%;
+    height: 75vh;
+    float: right;
+    position: relative;
+    /* z-index: -1; */
+  }
+  .leaflet-dragging .leaflet-grab {
+    cursor: grabbing;
+  }
+  .leaflet-container {
+    cursor: pointer !important;
+  }
+  .main_by_line {
+    margin: 0px;
+    height: 4vh;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    background: #f2d851;
+    border: 2px solid black;
+  }
+  .byLineText {
+    color: gray;
+    font-family: Karla;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    margin: auto;
+  }
+}
+
+/*mobile css */
+@media (max-width: 800px) {
+  .each-slide > div {
+    height: 0;
+    overflow: hidden;
+    padding-top: calc(6600 / 3864 * 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+  }
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .leaflet-container {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  .rectangle {
+    position: relative;
+    height: 100%;
+    margin: 0px;
+    border: 2px solid black;
+    background: #f2d851;
+  }
+  .QuestionNumber {
+    position: relative;
+    float: left;
+    margin: 0px;
+    width: 100%;
+    height: 4vh;
+    font-size: 24px;
+    background: #ffb5b5;
+    font-family: 'Bebas Neue', cursive;
+    border-bottom: 2px solid black;
+  }
+  .answer_box {
+    position: absolute;
+    left: 12.5%;
+    top: 110%;
+    width: 75%;
+    height: 40vh;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    margin: auto;
+    z-index: 2;
+  }
+  .wrong_answer_box {
+    position: absolute;
+    left: 12.5%;
+    top: 120%;
+    width: 75%;
+    height: 15vh;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    margin: auto;
+    z-index: 2;
+  }
+  .NextButton {
+    margin-right: 5%;
+  }
+  .PrevButton {
+    margin-left: 5%;
+  }
+  .StartButton {
+    width: 25%;
+    height: 5vh;
+    margin: auto;
+    float: right;
+    margin-right: 5%;
+  }
+  #answer {
+    top: 30%;
+    font-family: 'Karla', sans-serif;
+    font-style: normal;
+  }
+  .Postcard {
+    width: 80%;
+    height: 18vh;
+    top: -1vh;
+    margin-bottom: 0px;
+  }
+  .answerText {
+    font-family: 'Karla', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    width: 90%;
+    margin: auto;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+  .JanssNote {
+    font-family: 'Karla', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    width: 90%;
+    margin: auto;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+  .QuestionBox {
+    height: 60%;
+  }
+  #question {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    font-family: 'Karla', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    top: 1vh;
+  }
+  .trivia-container {
+    height: 90vh;
+  }
+  .map-container {
+    width: 100%;
+    height: 60%;
+    margin-bottom: 0px;
+    margin-top: 2px;
+  }
+  .sidebar {
+    width: 100%;
+    height: 35%;
+  }
+  .InstructionBox {
+    height: 80%;
+  }
+  #button-text {
+    margin: auto;
+  }
+  .main_by_line {
+    background: #f2d851;
+    border: 2px solid black;
+    margin-top: 2px;
+  }
+  .byLineText {
+    color: gray;
+    font-family: Karla;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    white-space: pre-wrap;
+    line-height: 12px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+  }
+}
