@@ -1,5 +1,5 @@
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 900px) {
 .Outer_box{
     position: absolute;
     width: 1216px;
@@ -26,8 +26,8 @@ top: 1730px; */
     font-size: 24px;
     line-height: 24px;
     color: #000000;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 .title{
     font-family: Amiri;
@@ -35,7 +35,6 @@ top: 1730px; */
     font-weight: bold;
     font-size: 50px;
     line-height: 0px;
-    display: flex;
     align-items: center;
     text-align: center;
     /* letter-spacing: 0.16em; */
@@ -57,35 +56,221 @@ top: 1730px; */
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
-    display: flex;
     text-align: left;
-    width: 100%;
-    margin-left: 10px;
-    margin-right: 15px;
+    /* width: 90%; */
+    margin-left: 25px;
+    margin-right: 25px;
 }
 .answer{
     position: relative;
     background-color:#FFF0C9;
-    margin: 10px;
+    margin-top: 10px;
+    margin-left: 45px;
+    border-radius: 20px;
     font-family: Prompt;
     font-style: normal;
     font-weight: lighter;
     font-size: 14px;
     line-height: 27px;
-    display: flex;
     align-items: center;
     text-align: center;
-    width: 30%;
+    width: 50%;
 }
-.byline{
+.answer:hover{
+    background-color: #D7F4EA;
+}
+.bottom_box{
     position: absolute;
     bottom:0%;
     background-color: #FFF0C9;
     border-top: 4px solid #000000;
+    height: 125px;
     font-family: Prompt;
     font-style: normal;
     font-weight: lighter;
     font-size: 14px;
 }
+.restart{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #FFF0C9;
+    width: 30%;
+    height: 30px;
+    margin-bottom: 10px;
+    font-family: Prompt;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 14px;
+    line-height: 27px;
+    align-items: center;
+    text-align: center;
+}
+.restart:hover{
+    background-color: #D7F4EA;
+}
+.reveal{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #FFF0C9;
+    width: 30%;
+    height: 30px;
+    margin-bottom: 10px;
+    font-family: Prompt;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 14px;
+    line-height: 27px;
+    align-items: center;
+    text-align: center;
+}
+.reveal:hover{
+    background-color: #D7F4EA;
+}
+.byline{
+    position: relative;
+    bottom: 0px;
+    margin: 15px;
+    margin-top: 50px;
+}
 
 }
+
+@media only screen and (max-width: 900px) {
+    .Outer_box{
+        position: absolute;
+        width: 331px;
+        height: 495px;
+    /* left: 113px;
+    top: 1730px; */
+        border: 4px solid #000000;
+        box-sizing: border-box;
+    }
+    .title_box{
+        position:absolute;
+        top: 0;
+        width: 100%;
+        height: 10%;
+        border-bottom: 4px solid #000000;
+        box-sizing: border-box;
+        background-color: #FFF0C9;
+        ;
+    }
+    .explainer{
+        font-family: Prompt;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: #000000;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .title{
+        font-family: Amiri;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 0px;
+        align-items: center;
+        text-align: center;
+        /* letter-spacing: 0.16em; */
+    }
+    .question_box{
+        position:absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 90%;
+        /*border-right: 4px solid #000000;*/
+        box-sizing: border-box;
+        background-color: #D1E7F3;
+    }
+    .Question_Text {
+        position: relative;
+        font-family: Prompt;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+        text-align: left;
+        /* width: 90%; */
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .answer{
+        position: relative;
+        background-color:#FFF0C9;
+        margin-top: 10px;
+        margin-left: 45px;
+        border-radius: 20px;
+        font-family: Prompt;
+        font-style: normal;
+        font-weight: lighter;
+        font-size: 14px;
+        line-height: 27px;
+        align-items: center;
+        text-align: center;
+        width: 50%;
+    }
+    .answer:hover{
+        background-color: #D7F4EA;
+    }
+    .bottom_box{
+        position: absolute;
+        bottom:0%;
+        background-color: #FFF0C9;
+        border-top: 4px solid #000000;
+        height: 110px;
+        font-family: Prompt;
+        font-style: normal;
+        font-weight: lighter;
+        font-size: 14px;
+    }
+    .restart{
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        background-color: #FFF0C9;
+        width: 30%;
+        height: 30px;
+        margin-bottom: 5px;
+        font-family: Prompt;
+        font-style: normal;
+        font-weight: lighter;
+        font-size: 14px;
+        line-height: 27px;
+        align-items: center;
+        text-align: center;
+    }
+    .restart:hover{
+        background-color: #D7F4EA;
+    }
+    .reveal{
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        background-color: #FFF0C9;
+        width: 30%;
+        height: 30px;
+        margin-bottom: 5px;
+        font-family: Prompt;
+        font-style: normal;
+        font-weight: lighter;
+        font-size: 14px;
+        line-height: 27px;
+        align-items: center;
+        text-align: center;
+    }
+    .reveal:hover{
+        background-color: #D7F4EA;
+    }
+    .byline{
+        position: relative;
+        bottom: 0px;
+        margin: 15px;
+        margin-top: 40px;
+    }
+    
+    }
