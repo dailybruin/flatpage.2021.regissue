@@ -8,6 +8,8 @@ import { mediaQueries } from "./shared/config";
 import PowellDesktop from './assets/landing_desktop.gif';
 import PowellMobile from './assets/landing_mobile.gif';
 
+import SpotFinder from './components/SpotFinder';
+
 const RenderGIF = styled("img")`
   width: 100%;
   height: 100vh;
@@ -53,10 +55,11 @@ function App() {
 
   return (
     <>
-        <DBHeader />
+    <SpotFinder></SpotFinder>
+        {/* <DBHeader />
           <RenderGIF src={PowellDesktop}></RenderGIF>
         
-        <StoriesPage data={data}/>
+        <StoriesPage data={data}/> */}
       </>
   );
 }

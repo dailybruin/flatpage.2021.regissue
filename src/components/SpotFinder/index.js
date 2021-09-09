@@ -1,6 +1,6 @@
 import React from "react";
 
-class MyMap extends React.Component {
+class SpotFinder extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -53,4 +53,4 @@ class MyMap extends React.Component {
     }
 };
 
-export default MyMap;
+export default SpotFinder;

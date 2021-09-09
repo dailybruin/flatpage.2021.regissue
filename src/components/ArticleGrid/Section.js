@@ -1,6 +1,6 @@
 import React from 'react';
 import BannerAd from '../BannerAd';
-import MyMap from '../Map';
+import SpotFinder from '../SpotFinder';
 import SeniorAdvice from '../senior_advice/SeniorAdvice';
 // import ArticleCard from './ArticleCard';
 import {
@@ -16,7 +16,7 @@ const Section = (props) => {
     return (
       <SectionContainer id={props.data.type}>
         <SectionHeader>{props.data.type}</SectionHeader>
-        <MyMap></MyMap>
+        <SpotFinder></SpotFinder>
         <BannerAd data={props.data} />
       </SectionContainer>
     );
