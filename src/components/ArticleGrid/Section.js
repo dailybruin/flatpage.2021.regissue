@@ -1,7 +1,6 @@
 import React from 'react';
 import BannerAd from '../BannerAd';
 import MyMap from '../Map';
-import SeniorAdvice from '../senior_advice/SeniorAdvice';
 // import ArticleCard from './ArticleCard';
 import {
   Grid,
@@ -18,13 +17,6 @@ const Section = (props) => {
         <SectionHeader>{props.data.type}</SectionHeader>
         <MyMap></MyMap>
         <BannerAd data={props.data} />
-      </SectionContainer>
-    );
-  } else if (props.data.type === 'Senior Advice') {
-    return (
-      <SectionContainer id={props.data.type}>
-        <SectionHeader>{props.data.type}</SectionHeader>
-        <SeniorAdvice></SeniorAdvice>
       </SectionContainer>
     );
   } else {
