@@ -8,19 +8,14 @@ body {
 }
 
 html {
-  background: linear-gradient(180deg, #f2d851 0%, #fac390 50.52%, #ffb5b5 100%);
+  background-image: url(./assets/background.jpeg);
   background-attachment: fixed;
 }
 
 @media only screen and (max-width: 900px) {
   html {
-    background: linear-gradient(
-      180deg,
-      #f2d851 0%,
-      #fac390 50.52%,
-      #ffb5b5 100%
-    );
-    background-attachment: local;
+    background-image: url(./assets/background.jpeg);
+    background-attachment: fixed;
   }
 }
 
