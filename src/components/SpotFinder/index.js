@@ -1,4 +1,5 @@
 import React from "react";
+import './finder.css';
 
 class SpotFinder extends React.Component {
     constructor(props) {
