@@ -6,7 +6,7 @@ import StoriesPage from './components/ArticleGrid'
 import styled, { keyframes } from "styled-components";
 import { mediaQueries } from "./shared/config";
 import PowellDesktop from './assets/landing_desktop.gif';
-import PowellMobile from './assets/landing_mobile.gif';
+import Staff from './components/Staff'
 
 const RenderGIF = styled("img")`
   width: 100%;
@@ -31,13 +31,8 @@ const DBHeader = styled("div")`
   border-bottom: 2px solid black;
 `;
 
-function initializeReactGA() {
-  ReactGA.initialize('UA-28181852-32');
-  ReactGA.pageview('/homepage');
-}
 
 function App() {
-  initializeReactGA();
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -55,7 +50,6 @@ function App() {
     <>
         <DBHeader />
           <RenderGIF src={PowellDesktop}></RenderGIF>
-        
         <StoriesPage data={data}/>
       </>
   );
