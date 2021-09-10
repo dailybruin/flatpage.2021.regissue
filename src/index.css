@@ -8,13 +8,13 @@ body {
 }
 
 html {
-  background-image: url(./assets/background.jpeg);
+  background-image: url(./assets/background.png);
   background-attachment: fixed;
 }
 
 @media only screen and (max-width: 900px) {
   html {
-    background-image: url(./assets/background.jpeg);
+    background-image: url(./assets/background.png);
     background-attachment: fixed;
   }
 }
