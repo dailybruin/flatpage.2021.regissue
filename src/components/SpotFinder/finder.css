@@ -65,7 +65,7 @@ top: 1730px; */
     position: relative;
     background-color:#FFF0C9;
     margin-top: 10px;
-    margin-left: 45px;
+    margin-left: 12%;
     border-radius: 20px;
     font-family: Prompt;
     font-style: normal;
@@ -74,7 +74,7 @@ top: 1730px; */
     line-height: 27px;
     align-items: center;
     text-align: center;
-    width: 50%;
+    width: 75%;
 }
 .answer:hover{
     background-color: #D7F4EA;
@@ -133,6 +133,14 @@ top: 1730px; */
     bottom: 0px;
     margin: 15px;
     margin-top: 50px;
+}
+.Result{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 67%;
+    height:80%;
+    overflow:scroll;
 }
 
 }

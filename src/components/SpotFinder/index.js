@@ -1,5 +1,6 @@
 import React from "react";
 import './finder.css';
+import image from './sample.png';
 
 class SpotFinder extends React.Component {
     constructor(props) {
@@ -7,11 +8,18 @@ class SpotFinder extends React.Component {
         this.handleBegin = this.handleBegin.bind(this);
         this.handleInOut = this.handleInOut.bind(this);
         this.handleNoise = this.handleNoise.bind(this);
+        this.handleCoffee = this.handleCoffee.bind(this);
+        this.handleLocation = this.handleLocation.bind(this);
+        this.handleOutlets = this.handleOutlets.bind(this);
         this.handleRestart = this.handleRestart.bind(this);
+        this.showResult = this.showResult.bind(this);
         this.state = {
             question: 0,
             in_out: null,
             noise: null,
+            coffee: null,
+            location: null,
+            outlets: null
         }
     };
 
@@ -33,14 +41,71 @@ class SpotFinder extends React.Component {
             noise: noiseLevel,
             question: nextQuestion
         });
-        console.log(this.state.in_out, this.state.noise, this.state.q)
+    }
+    handleCoffee(props, Coffee){
+        this.setState({
+            coffee: Coffee,
+        });
+    }
+    handleLocation(props, Location){
+        this.setState({
+            location: Location,
+        });
+    }
+    handleOutlets(props, Outlets){
+        this.setState({
+            outlets: Outlets,
+        });
     }
     handleRestart(props){
         this.setState({
             question: 0,
             in_out: null,
             noise: null,
+            coffee: null,
+            location: null,
+            outlets: null
         })
+    }
+
+    showResult(props){
+        console.log('in Result function')
+        console.log(this.state.in_out)
+            if (this.state.in_out === 'In' && this.state.noise === 'quiet' && this.state.coffee === 'coffee'){
+                console.log('Result');
+                return <img className = 'Result' src = {image}></img>
+            }
+            else if (this.state.in_out === 'In' && this.state.noise === 'quiet' && this.state.coffee === 'no coffee'){
+                console.log('Result');
+                return <div className = 'Result'>In, quiet, no coffee</div>;
+            }
+            else if (this.state.in_out === 'In' && this.state.noise === 'loud' && this.state.location === 'Westwood'){
+                console.log('Result');
+                return <div className = 'Result'>In, loud, Westwood</div>;
+            }
+            else if (this.state.in_out === 'In' && this.state.noise === 'loud' && this.state.location === 'Hill'){
+                console.log('Result');
+                return <div className = 'Result'>In, loud, hill</div>;
+            }
+            else if (this.state.in_out === 'In' && this.state.noise === 'loud' && this.state.location === 'Campus'){
+                console.log('Result');
+                return <div className = 'Result'>In, loud, campus</div>;
+            }
+            else if (this.state.in_out === 'Out' && this.state.outlets === 'outlets'){
+                console.log('Result');
+                return <div className = 'Result'>Out, Outlets</div>;
+            }
+            else if (this.state.in_out === 'Out' && this.state.outlets === 'no outlets'){
+                console.log('Result');
+                return <div className = 'Result'>Out, No Outlets</div>
+            }
+            else if (this.state.in_out === 'Both'){
+                console.log('Result');
+                return <div className = 'Result' >Both</div>;
+            }
+            else{
+                console.log('Default');
+            }
     }
 
     render() {
@@ -68,23 +133,23 @@ class SpotFinder extends React.Component {
                 </div>
                 : null
             }
-                {(this.state.noise === 'quiet') 
+                {(this.state.in_out === 'In' && this.state.noise === 'quiet') 
                 ? <div class = "question">
                 {/* If quiet */}
                     <p class = "Question_Text">Are you looking for a study space with nearby coffee options?</p>
-                    <button class = "answer">Sells coffee</button>
-                    <button class = "answer">No coffee</button>
+                    <button class = "answer" onClick={()=>this.handleCoffee(this, 'coffee')}>Sells coffee</button>
+                    <button class = "answer" onClick={()=>this.handleCoffee(this, 'no coffee')}>No coffee</button>
                 </div>
                 :null
                 }
 
-                {(this.state.noise === 'loud') 
+                {( this.state.in_out === 'In' && this.state.noise === 'loud') 
                 ? <div class = "question">
                 {/* If talking allowed */}
                     <p class = "Question_Text">Where are you looking for a study space?</p>
-                    <button class = "answer">Westwood</button>
-                    <button class = "answer">The Hill</button>
-                    <button class = "answer">Campus</button>
+                    <button class = "answer" onClick={()=>this.handleLocation(this, 'Westwood')}>Westwood</button>
+                    <button class = "answer" onClick={()=>this.handleLocation(this, 'Hill')}>The Hill</button>
+                    <button class = "answer" onClick={()=>this.handleLocation(this, 'Campus')}>Campus</button>
                 </div>
                 : null
                 }
@@ -93,8 +158,8 @@ class SpotFinder extends React.Component {
                 ? <div class = "question">
                 {/*If outside */}
                     <p class = "Question_Text">Do you need outlets in order to study?</p>
-                    <button class = "answer">Outlets</button>
-                    <button class = "answer">No Outlets</button>
+                    <button class = "answer" onClick={()=>this.handleOutlets(this, 'outlets')}>Outlets</button>
+                    <button class = "answer" onClick={()=>this.handleOutlets(this, 'no outlets')}>No Outlets</button>
                 </div> 
                 : null
                 }
@@ -105,6 +170,7 @@ class SpotFinder extends React.Component {
                     <p class = "byline">Graphic by Alex Yoo, Graphics editor. Interactive by Laurel Woods, Data editor and Lindsey Parungo, assistant Data editor.</p>
                 </div>
             </div>
+            {this.showResult(this)}
         </div>
         );
     }
