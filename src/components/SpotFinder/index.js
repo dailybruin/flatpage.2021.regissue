@@ -43,18 +43,24 @@ class SpotFinder extends React.Component {
         });
     }
     handleCoffee(props, Coffee){
+        let nextQuestion = this.state.question + 1
         this.setState({
             coffee: Coffee,
+            question: nextQuestion
         });
     }
     handleLocation(props, Location){
+        let nextQuestion = this.state.question + 1
         this.setState({
             location: Location,
+            question: nextQuestion
         });
     }
     handleOutlets(props, Outlets){
+        let nextQuestion = this.state.question + 1
         this.setState({
             outlets: Outlets,
+            question: nextQuestion
         });
     }
     handleRestart(props){
@@ -209,24 +215,25 @@ class SpotFinder extends React.Component {
                     <button class = "answer" onClick={()=>this.handleNoise(this, 'loud')}>Talking allowed</button>
                 </div>
                 : null
-            }
-                {(this.state.question === 3 && this.state.noise === 'quiet') 
+                }
+
+                {( this.state.question === 3 && this.state.in_out === 'In' && this.state.noise === 'quiet') 
                 ? <div class = "question">
                 {/* If quiet */}
                     <p class = "Question_Text">Are you looking for a study space with nearby coffee options?</p>
-                    <button class = "answer">Sells coffee</button>
-                    <button class = "answer">No coffee</button>
+                    <button class = "answer" onClick={()=>this.handleCoffee(this, 'coffee')}>Sells coffee</button>
+                    <button class = "answer" onClick={()=>this.handleCoffee(this, 'no coffee')}>No coffee</button>
                 </div>
                 :null
                 }
 
-                {(this.state.question === 3 && this.state.noise === 'loud') 
+                {( this.state.question === 3 && this.state.in_out === 'In' && this.state.noise === 'loud') 
                 ? <div class = "question">
                 {/* If talking allowed */}
                     <p class = "Question_Text">Where are you looking for a study space?</p>
-                    <button class = "answer">Westwood</button>
-                    <button class = "answer">The Hill</button>
-                    <button class = "answer">Campus</button>
+                    <button class = "answer" onClick={()=>this.handleLocation(this, 'Westwood')}>Westwood</button>
+                    <button class = "answer" onClick={()=>this.handleLocation(this, 'Hill')}>The Hill</button>
+                    <button class = "answer" onClick={()=>this.handleLocation(this, 'Campus')}>Campus</button>
                 </div>
                 : null
                 }
@@ -235,11 +242,14 @@ class SpotFinder extends React.Component {
                 ? <div class = "question">
                 {/*If outside */}
                     <p class = "Question_Text">Do you need outlets in order to study?</p>
-                    <button class = "answer">Outlets</button>
-                    <button class = "answer">No Outlets</button>
+                    <button class = "answer" onClick={()=>this.handleOutlets(this, 'outlets')}>Outlets</button>
+                    <button class = "answer" onClick={()=>this.handleOutlets(this, 'no outlets')}>No Outlets</button>
                 </div> 
                 : null
                 }
+                <div className = 'ResultBox'>
+                {this.showResult(this)}
+                </div>
 
                 <div class = "bottom_box">
                 <button class = "restart" onClick={()=>this.handleRestart(this)}>Start Over</button>
