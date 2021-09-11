@@ -1,3 +1,4 @@
+import { getAllByAltText } from "@testing-library/dom";
 import React from "react";
 import './finder.css';
 import image from './sample.png';
@@ -13,6 +14,7 @@ class SpotFinder extends React.Component {
         this.handleOutlets = this.handleOutlets.bind(this);
         this.handleRestart = this.handleRestart.bind(this);
         this.showResult = this.showResult.bind(this);
+        this.showAll = this.showAll.bind(this);
         this.state = {
             question: 0,
             in_out: null,
@@ -74,6 +76,13 @@ class SpotFinder extends React.Component {
         })
     }
 
+    showAll(props){
+        this.setState({
+            in_out: 'all',
+            question: 5,
+        })
+    }
+
     showResult(props){
         console.log('in Result function')
         console.log(this.state.in_out)
@@ -108,6 +117,9 @@ class SpotFinder extends React.Component {
             else if (this.state.in_out === 'Both'){
                 console.log('Result');
                 return <div className = 'Result' >Both</div>;
+            }
+            else if (this.state.in_out === 'all'){
+                return <div className = 'Result'>Show all</div>
             }
             else{
                 console.log('Default');
@@ -172,7 +184,7 @@ class SpotFinder extends React.Component {
 
                 <div class = "bottom_box">
                     <button class = "restart" onClick={()=>this.handleRestart(this)}>Start Over</button>
-                    <button class = "reveal">Show All</button>
+                    <button class = "reveal" onClick = {()=>this.showAll(this)}>Show All</button>
                     <p class = "byline">Graphic by Alex Yoo, Graphics editor. Interactive by Laurel Woods, Data editor and Lindsey Parungo, assistant Data editor.</p>
                 </div>
             </div>
@@ -253,7 +265,7 @@ class SpotFinder extends React.Component {
 
                 <div class = "bottom_box">
                 <button class = "restart" onClick={()=>this.handleRestart(this)}>Start Over</button>
-                    <button class = "reveal">Show All</button>
+                    <button class = "reveal" onClick ={()=>this.showAll(this)}>Show All</button>
                     <p class = "byline">Graphic by Alex Yoo, Graphics editor. Interactive by Laurel Woods, Data editor and Lindsey Parungo, assistant Data editor.</p>
                 </div>
             </div>
