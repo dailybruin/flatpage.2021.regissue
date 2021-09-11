@@ -4,13 +4,9 @@ import indoorsOutdoorsQuestion from './spotFinderData.js';
 import image from './sample.png';
 
 const SpotFinder = () => {
-    const [question, setQuestion] = useState(0);
     const [questions, setQuestions] = useState([indoorsOutdoorsQuestion]);
     const [imageSource, setImageSource] = useState(null);
 
-    const handleBegin = () => {
-        setQuestion(1);
-    };
     const handleRestart = () => {
         setQuestions([indoorsOutdoorsQuestion]);
         setImageSource(null);
