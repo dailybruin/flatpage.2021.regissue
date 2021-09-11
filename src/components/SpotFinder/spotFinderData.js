@@ -1,81 +1,81 @@
 import image from './sample.png';
 
 const coffeeQuestion = {
-    questionText: 'coffee?',
+    questionText: 'Are you looking for a study space with nearby coffee options?',
     answerOptions: [
         {
-            answerText: 'no',
+            answerText: 'Coffee',
             nextQuestion: null,
             image: image
         }, 
         {
-            answerText: 'yes',
+            answerText: 'No coffee',
             nextQuestion: null,
             image: image
         }
     ]
 };
 const locationQuestion = {
-    questionText: 'location?',
+    questionText: 'Where are you looking for a study space?',
     answerOptions: [
         {
-            answerText: 'westwood',
+            answerText: 'Westwood',
             nextQuestion: null,
             image: image
         }, 
         {
-            answerText: 'hill',
+            answerText: 'The Hill',
             nextQuestion: null,
             image: image
         }, 
         {
-            answerText: 'campus',
+            answerText: 'Campus',
             nextQuestion: null,
             image: image
         }
     ]
 };
 const outletsQuestion = {
-    questionText: 'outlets?',
+    questionText: 'Do you need outlets in order to study?',
     answerOptions: [
         {
-            answerText: 'yes',
+            answerText: 'Outlets',
             nextQuestion: null,
             image: image
         }, 
         {
-            answerText: 'no',
+            answerText: 'No Outlets',
             nextQuestion: null,
             image: image
         }
     ]
 };
 const noiseLevelQuestion = {
-    questionText: 'noise level',
+    questionText: 'What noise level are you looking for in a study space?',
     answerOptions: [
         {
-            answerText: 'quiet',
+            answerText: 'Quiet',
             nextQuestion: coffeeQuestion
         }, 
         {
-            answerText: 'talking',
+            answerText: 'Talking allowed',
             nextQuestion: locationQuestion
         }
     ]
 };
 const indoorsOutdoorsQuestion = {
-    questionText: 'inside or outside?',
+    questionText: 'Is your ideal study space indoors, outdoors, or a space with indoor and outdoor options?',
     answerOptions: [
         {
-            answerText: 'indoors',
+            answerText: 'Indoors',
             nextQuestion: noiseLevelQuestion
         }, 
         {
-            answerText: 'outdoors',
+            answerText: 'Outdoors',
             nextQuestion: outletsQuestion
         },
         {
-            answerText: 'both',
+            answerText: 'Both',
             nextQuestion: null,
             image: image
         },
