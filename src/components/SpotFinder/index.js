@@ -30,7 +30,7 @@ const SpotFinder = () => {
         <div className="outer-box">
             <div className='left-side'>
                 <div className="title-box">
-                    <p className="title">What UCLA study spot is best for you?</p>
+                    <p className="title">Which UCLA study spot is best for you?</p>
                     <p className="explainer">Are you looking for the perfect spot to study on or around campus? Answer the questions below to see which places match your preferences. Our recommendations include study spots on campus, on the hill, and in Westwood. Click the “See All” button at any time to look through all of our study spot picks.</p>
                 </div>
                 <div className="question-box">
@@ -52,9 +52,11 @@ const SpotFinder = () => {
                                 </div>
                             </div>)
                     })}
-                    <button className="restart button" onClick={()=>handleRestart()}>Start Over</button>
-                    <button className="reveal button" onClick = {()=>showAll()}>Show All</button>
                 </div>
+                <div className='control-buttons'>
+                        <button className="restart button" onClick={()=>handleRestart()}>Start Over</button>
+                        <button className="reveal button" onClick = {()=>showAll()}>Show All</button>
+                    </div>
                 <div className="bottom-box">
                     Graphic by Alex Yoo, Graphics editor. Interactive by Laurel Woods, Data editor and Lindsey Parungo, assistant Data editor.
                 </div>
