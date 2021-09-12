@@ -33,13 +33,13 @@
         border-bottom: 4px solid #000000;
         box-sizing: border-box;
         background-color: #FFF0C9;
-        /* display: inline-block; */
         padding: 0px 25px;
         overflow-y: scroll;
     }
     .explainer{
         font-size: 16px;
         margin-top: 0px;
+        margin-bottom: 0px;
     }
     .title{
         font-weight: 600;
@@ -117,7 +117,8 @@
         width: 25%;
         height: 30px;
         border-right: 0px;
-        background-color: #FFF0C9;
+        border-radius: 20px 0px 0px 20px;
+        background-color: #FFC0BE;
     }
     .restart:hover {
         background-color: #F6E1AA;
@@ -125,7 +126,8 @@
     .reveal {
         width: 25%;
         height: 30px;
-        background-color: #FFF0C9;
+        border-radius: 0px 20px 20px 0px;
+        background-color: #FFC0BE;
     }
     .reveal:hover {
         background-color: #F6E1AA;
@@ -233,7 +235,6 @@
         font-size: 14px;
     }
     .restart{
-        left: 10px;
         background-color: #FFF0C9;
         width: 30%;
         height: 30px;
