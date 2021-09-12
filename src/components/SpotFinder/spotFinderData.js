@@ -6,12 +6,14 @@ const coffeeQuestion = {
         {
             answerText: 'Coffee',
             nextQuestion: null,
-            image: image
+            image: image,
+            selected: false
         }, 
         {
             answerText: 'No coffee',
             nextQuestion: null,
-            image: image
+            image: image,
+            selected: false
         }
     ]
 };
@@ -21,17 +23,20 @@ const locationQuestion = {
         {
             answerText: 'Westwood',
             nextQuestion: null,
-            image: image
+            image: image,
+            selected: false
         }, 
         {
             answerText: 'The Hill',
             nextQuestion: null,
-            image: image
+            image: image,
+            selected: false
         }, 
         {
             answerText: 'Campus',
             nextQuestion: null,
-            image: image
+            image: image,
+            selected: false
         }
     ]
 };
@@ -41,12 +46,14 @@ const outletsQuestion = {
         {
             answerText: 'Outlets',
             nextQuestion: null,
-            image: image
+            image: image,
+            selected: false
         }, 
         {
             answerText: 'No Outlets',
             nextQuestion: null,
-            image: image
+            image: image,
+            selected: false
         }
     ]
 };
@@ -55,11 +62,13 @@ const noiseLevelQuestion = {
     answerOptions: [
         {
             answerText: 'Quiet',
-            nextQuestion: coffeeQuestion
+            nextQuestion: coffeeQuestion,
+            selected: false
         }, 
         {
             answerText: 'Talking allowed',
-            nextQuestion: locationQuestion
+            nextQuestion: locationQuestion,
+            selected: false
         }
     ]
 };
@@ -68,16 +77,19 @@ const indoorsOutdoorsQuestion = {
     answerOptions: [
         {
             answerText: 'Indoors',
-            nextQuestion: noiseLevelQuestion
+            nextQuestion: noiseLevelQuestion,
+            selected: false
         }, 
         {
             answerText: 'Outdoors',
-            nextQuestion: outletsQuestion
+            nextQuestion: outletsQuestion,
+            selected: false
         },
         {
             answerText: 'Both',
             nextQuestion: null,
-            image: image
+            image: image,
+            selected: false
         },
     ]
 };

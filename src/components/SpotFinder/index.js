@@ -10,20 +10,34 @@ const SpotFinder = () => {
     const handleRestart = () => {
         setQuestions([indoorsOutdoorsQuestion]);
         setImageSource(null);
+        indoorsOutdoorsQuestion.answerOptions.map((choices)=>{
+            choices.selected = false;
+        })
     };
     const showAll = () => {
         setQuestions([indoorsOutdoorsQuestion]);
         setImageSource(image);
+        indoorsOutdoorsQuestion.answerOptions.map((choices)=>{
+            choices.selected = false;
+        })
     };
     const handleAnswerClick = (question, option, index) => {
         const newQuestions = questions.slice(0, index+1);
+        question.answerOptions.map((choices)=>{
+            choices.selected = false;
+        })
+        option.selected = true;
         if (option.nextQuestion) {
+            option.nextQuestion.answerOptions.map((choices)=>{
+                choices.selected = false;
+            })
             setImageSource(null);
             newQuestions.push(option.nextQuestion);
         } else {
             setImageSource(option.image);
         }
         setQuestions([...newQuestions]);
+        
     };
 
     return (
@@ -43,8 +57,8 @@ const SpotFinder = () => {
                                         return (
                                             <button 
                                                 key={option.answerText} 
-                                                className={`answer button answer-${question.answerOptions.length}`}
-                                                onClick={() => handleAnswerClick(question, option, i)}
+                                                className={`answer button answer-${question.answerOptions.length}${(option.selected)?'-color':''}`}
+                                                onClick={() => handleAnswerClick(question, option, i) & console.log(option.selected)}
                                             > 
                                                 {option.answerText}
                                             </button>)

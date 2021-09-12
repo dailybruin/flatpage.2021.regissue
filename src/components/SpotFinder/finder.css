@@ -1,13 +1,13 @@
 
 @media only screen and (min-width: 700px) {
     .button {
-        background-color: #FFF0C9;
+        background-color:#D7F4EA;
         font-size: 14px;
         line-height: 27px;
         border: 2px solid black;
     }
     .button:hover{
-        background-color: #D7F4EA;
+        background-color: #7CC4A6;
     }
     .outer-box{
         width: 90vw;
@@ -73,8 +73,16 @@
     .answer-3 {
         width: 25%;
     }
+    .answer-3-color {
+        width: 25%;
+        background-color: #7CC4A6;
+    }
     .answer-2 {
-        width: 35%;
+        width: 40%;
+    }
+    .answer-2-color {
+        width: 40%;
+        background-color: #7CC4A6;
     }
     .image-container {
         width: 527px;
