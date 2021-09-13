@@ -6,6 +6,7 @@ import StoriesPage from './components/ArticleGrid'
 import styled, { keyframes } from "styled-components";
 import { mediaQueries } from "./shared/config";
 import PowellDesktop from './assets/landing_desktop.gif';
+import Footer from './components/Footer'
 import Staff from './components/Staff'
 
 const RenderGIF = styled("img")`
@@ -51,6 +52,7 @@ function App() {
         <DBHeader />
           <RenderGIF src={PowellDesktop}></RenderGIF>
         <StoriesPage data={data}/>
+        <Footer/>
       </>
   );
 }
