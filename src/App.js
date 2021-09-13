@@ -17,8 +17,8 @@ const RenderGIF = styled("img")`
 const DBHeader = styled("div")`
   z-index: 2001;
 
-  position: fixed;
-  background: ${colors.yellow};
+  position: relative;
+  background: black;
   width: 100%;
   padding: 0.5em 0;
   color: black;
@@ -29,6 +29,7 @@ const DBHeader = styled("div")`
   text-transform: uppercase;
   font-size: 18px;
   line-height: 21.6px;
+  color: white;
   border-bottom: 2px solid black;
 `;
 
@@ -49,7 +50,7 @@ function App() {
 
   return (
     <>
-        <DBHeader />
+        <DBHeader>DAILY BRUIN</DBHeader>
           <RenderGIF src={PowellDesktop}></RenderGIF>
         <StoriesPage data={data}/>
         <Footer/>
