@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { mediaQueries } from '../../shared/config';
+import styled from 'styled-components'
+import { mediaQueries } from '../../shared/config'
 
 export const Article = styled.div`
   /* border: 0.5px solid #000000; */
@@ -19,14 +19,14 @@ export const Article = styled.div`
   /* border: 2px solid yellow; */
   margin: 0 auto;
   /* /* box-sizing: border-box */
-`;
+`
 
 export const ArticleImage = styled.img`
   object-position: center center;
   object-fit: cover;
   height: 100%;
   width: 100%;
-`;
+`
 
 // export const ArticleHeadline = styled.h3`
 //   font-style: ${(italics) => (italics ? 'italics' : 'normal')};
@@ -59,7 +59,7 @@ export const FlexDiv10 = styled.div`
   border-left: 1px solid black;
   border-right: 1px solid black;
   box-sizing: border-box;
-  background-color: #ffb5b5;
+  background-color: ${({ color }) => color};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,13 +77,13 @@ export const FlexDiv10 = styled.div`
   ${mediaQueries.mobile} {
     font-size: 5.4vw;
   }
-`;
+`
 
 export const FlexDiv15 = styled.div`
   padding: 0.5vh 0.5vw;
   min-height: 25%;
   height: auto;
-  background-color: #f9eeb2;
+  background-color: ${({ color }) => color};
   border: 1px solid black;
   box-sizing: border-box;
   display: flex;
@@ -105,21 +105,21 @@ export const FlexDiv15 = styled.div`
   ${mediaQueries.mobile} {
     font-size: 4.8vw;
   }
-`;
+`
 
 export const FlexDiv75 = styled.div`
   height: 65%;
   /* border: 2px solid red; */
   border: 1px solid black;
   box-sizing: border-box;
-`;
+`
 
 export const FlexDiv85 = styled.div`
   height: 85%;
   /* border: 2px solid red; */
   border: 1px solid black;
   box-sizing: border-box;
-`;
+`
 
 export const ArticleLink = styled.a`
   width: 100%;
@@ -127,4 +127,4 @@ export const ArticleLink = styled.a`
   text-decoration: none;
   color: black;
   /* border: 2px solid darkgreen; */
-`;
+`

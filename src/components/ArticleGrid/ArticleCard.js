@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   Article,
   ArticleImage,
@@ -7,14 +7,14 @@ import {
   FlexDiv15,
   FlexDiv75,
   FlexDiv85,
-} from './ArticleCardElements';
+} from './ArticleCardElements'
 
-const ArticleCard = ({ article }) => {
+const ArticleCard = ({ article, key, bylineColor, headlineColor, size }) => {
   if (article.type === 'paragraph') {
-    return <div></div>;
+    return <div></div>
   }
-  if (article.type == 'ad') {
-    console.log("ad!!");
+  if (article.type === 'ad') {
+    console.log('ad!!')
     return (
       <Article>
         <broadstreet-zone zone-id="89668"></broadstreet-zone>
@@ -29,10 +29,10 @@ const ArticleCard = ({ article }) => {
           <FlexDiv85>
             <ArticleImage src={article.image_url} />
           </FlexDiv85>
-          <FlexDiv15>{article.image_name}</FlexDiv15>
+          <FlexDiv15 color={bylineColor}>{article.image_name}</FlexDiv15>
         </Article>
       </ArticleLink>
-    );
+    )
   }
   if (article.cardSize === undefined || article.cardSize === 'hamburger') {
     return (
@@ -41,12 +41,12 @@ const ArticleCard = ({ article }) => {
           <FlexDiv75>
             <ArticleImage src={article.image_url} />
           </FlexDiv75>
-          <FlexDiv10>By {article.byline}</FlexDiv10>
-          <FlexDiv15>{article.image_headline}</FlexDiv15>
+          <FlexDiv10 color={bylineColor}>By {article.byline}</FlexDiv10>
+          <FlexDiv15 color={headlineColor}>{article.image_headline}</FlexDiv15>
         </Article>
       </ArticleLink>
-    );
+    )
   }
-};
+}
 
-export default ArticleCard;
+export default ArticleCard
