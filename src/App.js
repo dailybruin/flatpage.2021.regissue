@@ -37,7 +37,7 @@ function App() {
 
   useEffect(() => {
     fetch(
-      'https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2021.grad-issue'
+      'https://kerckhoff.dailybruin.com/api/packages/flatpages/flatpage.2021.registration-issue'
     )
       .then((res) => res.json())
       .then((res) => setData(res.data['article.aml']));
@@ -51,6 +51,7 @@ function App() {
         <DBHeader />
           <RenderGIF src={PowellDesktop}></RenderGIF>
         <StoriesPage data={data}/>
+        <Staff data={data} />
       </>
   );
 }
