@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import './finder.css';
 import indoorsOutdoorsQuestion from './spotFinderData.js';
-import image from './sample.png';
+import allLocations from './graphics/all-locations.png';
+import coverImage from './graphics/cover.png';
 
 const SpotFinder = () => {
     const [questions, setQuestions] = useState([indoorsOutdoorsQuestion]);
-    const [imageSource, setImageSource] = useState(null);
+    const [imageSource, setImageSource] = useState(coverImage);
 
     const handleRestart = () => {
         setQuestions([indoorsOutdoorsQuestion]);
-        setImageSource(null);
+        setImageSource(coverImage);
         indoorsOutdoorsQuestion.answerOptions.map((choices)=>{
             choices.selected = false;
         })
     };
     const showAll = () => {
         setQuestions([indoorsOutdoorsQuestion]);
-        setImageSource(image);
+        setImageSource(allLocations);
         indoorsOutdoorsQuestion.answerOptions.map((choices)=>{
             choices.selected = false;
         })
@@ -31,7 +32,7 @@ const SpotFinder = () => {
             option.nextQuestion.answerOptions.map((choices)=>{
                 choices.selected = false;
             })
-            setImageSource(null);
+            setImageSource(coverImage);
             newQuestions.push(option.nextQuestion);
         } else {
             setImageSource(option.image);
