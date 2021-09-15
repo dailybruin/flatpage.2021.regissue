@@ -61,38 +61,39 @@ export default function Staff(props) {
                 )
               }
               else if (info.section === "PRIME"){
-                <>
-                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}><b>{info.section}</b></p>
-                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}>{info.editor}</p>
-                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}>{info.editor2}</p>
-                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}>{info.editor3}</p>
-                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}>{info.staff}</p>
-            </>
+                return(
+                <div>
+                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif","font-weight": "500"}}><b>{info.section}</b><br></br></p>
+                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif","font-weight": "500"}}>{info.editor}</p>
+                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif","font-weight": "500"}}>{info.editor2}</p>
+                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif","font-weight": "500"}}>{info.editor3}</p>
+                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif","font-weight": "500"}}>{info.staff}</p>
+            </div>)
               }
               else if (info.section === "Advertising"){
-                <>
-                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}><b>{info.section}</b></p>
+                return(
+                <div>
+                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}><b>{info.section}</b><br></br></p>
                 <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}>{info.editor}</p>
                 <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}>{info.editor2}</p>
                 <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}>{info.editor3}</p>
                 <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}>{info.editor4}</p>
-                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}><b>{info.editor5}</b></p>
+                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}>{info.editor5}</p>
                 <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}>{info.editor6}</p>
                 <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}>{info.editor7}</p>
                 <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}>{info.editor8}</p>
                 <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}>{info.editor9}</p>
             
-            </>
+            </div>)
               }
               else {
               return (
-                <>
-                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}><b>{info.section}</b></p>
-                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}>{info.editor}</p>
-                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}>{info.assistants}</p>
-                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}>{info.staff}</p>
+                <div>
+                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif","font-weight": "500"}}><b>{info.section}</b><br></br>{info.editor}</p>
+                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif","font-weight": "500"}}>{info.assistants}</p>
+                <p style={{"margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif","font-weight": "500"}}>{info.staff}</p>
                 
-            </>)
+            </div>)
             
             }
 })} 
