@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 
-import Header from '../Header'
 import styled, { keyframes } from 'styled-components'
-import Navbar from './Navbar'
-import MobileButtons from './MobileButtons'
+import MenuButton from './MenuButton'
 
 const fadeIn = keyframes`
   from {
@@ -28,13 +26,10 @@ const fadeOut = keyframes`
 const NavbarContainer = styled.div`
   z-index: 2000;
 
-  position: fixed;
-  height: 230px;
+  position: relative;
   width 100%;
   left: 0px;
-  top: 38px;
-  background: linear-gradient(180deg, #F2D851 0%, #F6CC74 100%);
-  border-bottom: 2px solid black;
+  top: 20px;
 
   display: block;
   visibility: ${props => props.showNav ? 'visible' : 'hidden'};
@@ -42,19 +37,18 @@ const NavbarContainer = styled.div`
   transition: visibility 0.2s linear 0.001s;
 `
 
-const NavHeader = () => {
-  const [showNav, setShowNav] = useState(false)
+const NavHeader = (props) => {
+  const [showNav, setShowNav] = useState(true)
 
   return (
     <div>
-        <MobileButtons
+        <MenuButton
           callbacks={{
             setShowNav: setShowNav
           }}
         />
-        <Header />
         <NavbarContainer showNav={showNav}>
-          <Navbar mobile/>
+          {props.children}
         </NavbarContainer>
     </div>
   )

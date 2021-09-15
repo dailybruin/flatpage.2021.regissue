@@ -6,13 +6,15 @@ import StoriesPage from './components/ArticleGrid'
 import styled, { keyframes } from "styled-components";
 import { mediaQueries } from "./shared/config";
 import PowellDesktop from './assets/landing_desktop.gif';
-import Footer from './components/Footer'
 import Staff from './components/Staff'
+
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const RenderGIF = styled("img")`
   width: 100%;
   height: 100vh;
-  
 `;
 const DBHeader = styled("div")`
   z-index: 2001;
@@ -50,11 +52,12 @@ function App() {
 
   return (
     <>
-        <DBHeader>DAILY BRUIN</DBHeader>
-          <RenderGIF src={PowellDesktop}></RenderGIF>
-        <StoriesPage data={data}/>
-        <Footer/>
-      </>
+      <Header />
+      <RenderGIF src={PowellDesktop}></RenderGIF>
+      <Navbar />
+      <StoriesPage data={data}/>
+      <Footer/>
+    </>
   );
 }
 
