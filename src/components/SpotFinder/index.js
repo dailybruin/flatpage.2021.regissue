@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import './finder.css';
 import indoorsOutdoorsQuestion from './spotFinderData.js';
-import image from './sample.png';
+import allLocations from './graphics/all-locations.png';
+import coverImage from './graphics/cover.png';
 
 const SpotFinder = () => {
     const [questions, setQuestions] = useState([indoorsOutdoorsQuestion]);
-    const [imageSource, setImageSource] = useState(null);
+    const [imageSource, setImageSource] = useState(coverImage);
 
     const handleRestart = () => {
         setQuestions([indoorsOutdoorsQuestion]);
-        setImageSource(null);
+        setImageSource(coverImage);
         indoorsOutdoorsQuestion.answerOptions.map((choices)=>{
             choices.selected = false;
         })
     };
     const showAll = () => {
         setQuestions([indoorsOutdoorsQuestion]);
-        setImageSource(image);
+        setImageSource(allLocations);
         indoorsOutdoorsQuestion.answerOptions.map((choices)=>{
             choices.selected = false;
         })
@@ -31,7 +32,7 @@ const SpotFinder = () => {
             option.nextQuestion.answerOptions.map((choices)=>{
                 choices.selected = false;
             })
-            setImageSource(null);
+            setImageSource(coverImage);
             newQuestions.push(option.nextQuestion);
         } else {
             setImageSource(option.image);
@@ -44,7 +45,7 @@ const SpotFinder = () => {
         <div className="outer-box">
             <div className='left-side'>
                 <div className="title-box">
-                    <p className="title">Which UCLA study spot is best for you?</p>
+                    <p className="title">What UCLA study spot is best for you?</p>
                     <p className="explainer">Are you looking for the perfect spot to study on or around campus? Answer the questions below to see which places match your preferences. Our recommendations include study spots on campus, on the hill, and in Westwood. Click the “See All” button at any time to look through all of our study spot picks.</p>
                 </div>
                 <div className="question-box">

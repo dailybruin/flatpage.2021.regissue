@@ -1,4 +1,12 @@
-import image from './sample.png';
+import both from './graphics/both.png';
+import inCoffeeQuiet from './graphics/in-coffee-quiet.png';
+import inQuietNoCoffee from './graphics/in-quiet-no-coffee.png';
+import inTalkCampus from './graphics/in-talk-campus.png';
+import inTalkHill from './graphics/in-talk-hill.png';
+import inTalkWW from './graphics/in-talk-ww.png';
+import outNoOutlets from './graphics/out-no-outlets.png';
+import outOutlets from './graphics/out-outlets.png';
+
 
 const coffeeQuestion = {
     questionText: 'Are you looking for a study space with nearby coffee options?',
@@ -6,13 +14,13 @@ const coffeeQuestion = {
         {
             answerText: 'Coffee',
             nextQuestion: null,
-            image: image,
+            image: inCoffeeQuiet,
             selected: false
         }, 
         {
             answerText: 'No coffee',
             nextQuestion: null,
-            image: image,
+            image: inQuietNoCoffee,
             selected: false
         }
     ]
@@ -23,19 +31,19 @@ const locationQuestion = {
         {
             answerText: 'Westwood',
             nextQuestion: null,
-            image: image,
+            image: inTalkWW,
             selected: false
         }, 
         {
             answerText: 'The Hill',
             nextQuestion: null,
-            image: image,
+            image: inTalkHill,
             selected: false
         }, 
         {
             answerText: 'Campus',
             nextQuestion: null,
-            image: image,
+            image: inTalkCampus,
             selected: false
         }
     ]
@@ -46,13 +54,13 @@ const outletsQuestion = {
         {
             answerText: 'Outlets',
             nextQuestion: null,
-            image: image,
+            image: outOutlets,
             selected: false
         }, 
         {
             answerText: 'No Outlets',
             nextQuestion: null,
-            image: image,
+            image: outNoOutlets,
             selected: false
         }
     ]
@@ -88,7 +96,7 @@ const indoorsOutdoorsQuestion = {
         {
             answerText: 'Both',
             nextQuestion: null,
-            image: image,
+            image: both,
             selected: false
         },
     ]
