@@ -47,21 +47,22 @@ const NavButton = (props) => {
       highlight={props.highlight}
       first={props.first}
       onClick={() => {
-        const target = document.getElementById(props.section)
+        const target = document.getElementById(props.sectionId)
         if (target) {
           const top = target.getBoundingClientRect().top + window.pageYOffset - 100;
           window.scrollTo({ top, behavior: "smooth" })
         }
       }}
     >
-      {props.section}
+      {props.sectionName}
     </StyledButton>
   )
 }
 
 NavButton.propTypes = {
   first: PropTypes.bool,
-  section: PropTypes.string.isRequired,
+  sectionName: PropTypes.string.isRequired,
+  sectionId: PropTypes.string.isRequired,
   highlight: PropTypes.bool
 }
 
