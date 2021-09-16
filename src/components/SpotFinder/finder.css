@@ -121,6 +121,16 @@
     width: 100%;
     display: block;
 }
+.image-container::-webkit-scrollbar {
+    -webkit-appearance: none;
+    background-color: #FFF0C9;
+    width: 5px;
+}
+
+.image-container::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: gray;
+}
 
 @media only screen and (min-width: 700px) {
     .left-side {
