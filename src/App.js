@@ -7,6 +7,7 @@ import styled, { keyframes } from "styled-components";
 import { mediaQueries } from "./shared/config";
 import PowellDesktop from './assets/landing_desktop.gif';
 import Staff from './components/Staff'
+import LikeWhatYouSeeBox from './components/LikeWhatYouSeeBox'
 
 const RenderGIF = styled("img")`
   width: 100%;
@@ -48,10 +49,8 @@ function App() {
 
   return (
     <>
-        <DBHeader />
-          <RenderGIF src={PowellDesktop}></RenderGIF>
-        <StoriesPage data={data}/>
-        <Staff data={data} />
+        <LikeWhatYouSeeBox/>
+
       </>
   );
 }
