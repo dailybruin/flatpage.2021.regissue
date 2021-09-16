@@ -26,10 +26,9 @@ const Section = (props) => {
     colors.pastelLightYellow,
   ]
   const NUM_COLORS = BYLINE_COLORS.length;
-  if (props.data.type === 'Trivia Map') {
+  if (props.data.type === 'GraphicsInteractive') {
     return (
       <SectionContainer id={props.data.type}>
-        <SectionHeader>{props.data.type}</SectionHeader>
         <SpotFinder></SpotFinder>
         <BannerAd data={props.data} />
       </SectionContainer>

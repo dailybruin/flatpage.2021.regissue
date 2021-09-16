@@ -4,13 +4,11 @@
     border: 2px solid black;
     cursor: pointer;
     font-family: 'Prompt', sans-serif;
-    font-weight: lighter;
 }
 .button:hover{
     background-color: #7CC4A6;
 }
 .outer-box{
-    max-width: 1200px;
     height: 638px;
     margin: auto;
     border: 4px solid #000000;
