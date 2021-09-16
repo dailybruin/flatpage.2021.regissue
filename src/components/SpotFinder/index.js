@@ -6,14 +6,160 @@ import indoorsOutdoorsQuestion from './spotFinderData.js';
 import allLocations from './graphics/all-locations.png';
 import coverImage from './graphics/cover.png';
 
+const allAltText = `Charles E. Young Research Library
+North Campus
+Hours
+Monday through Thursday, 8 a.m. to 10 p.m.
+Friday, 8 a.m. to 6 p.m.
+Saturday, 10 a.m. to 6 p.m.
+Sunday, 12 p.m. to 9 p.m.
+Noise Level Options
+Quiet, Group Study rooms, “Collaboration Pods” 
+Printing Available in Library
+Black and white printing
+Copiers
+Other Technology Resources 
+Laptop lending
+Projector lending
+Nearby Coffee 
+Normally has a cafe but is currently closed due to COVID-19.
+Powell Library
+Main Quad
+Hours 
+Monday through Thursday, 8 a.m. to 7 p.m.
+Friday, 8 a.m. to 6 p.m.
+Saturday and Sunday, 10 a.m. to 5 p.m.
+Noise Level Options
+Quiet areas
+Group Study rooms
+“Collaboration Pods”
+Printing Available in Library
+Color and Black & White printing
+Copiers
+Other Technology Resources
+Laptop lending
+Projector lending
+Accessible computers
+Science and Engineering Library, Boelter Hall
+Boelter Hall 8270
+Hours
+Monday through Friday, 8 a.m. to 5 p.m.
+Noise Level Options
+Quiet space, Group Study rooms
+Printing Available in Library
+Black & White Printing
+Copier
+Coffee in SEAS Cafe (5800 Boelter Hall)
+Music Library
+Schoenberg Hall
+Hours
+Monday through Friday, 8 a.m. to 5 p.m.
+Noise Level Options
+Quiet space
+Group Study rooms
+Printing Available in Library
+Black & White printing
+Copiers
+Other Technology Resources
+Laptop lending
+Accessible computers
+
+Cafes:
+Kerckhoff Coffee House (Cafe)
+Second floor of Kerckhoff Hall
+Hours
+Monday through Thursday, 7 a.m. to 11 p.m.
+Friday, 7 a.m. to 7 p.m.
+Saturday, 8 a.m. to 6 p.m.
+Sunday, 8 a.m. to 11 p.m. 
+Nearby Printing Locations
+Ackerman Union
+WEPA printer in Kerckhoff 3rd Floor Study Lounge
+Evelyn & Mo Ostin Music Cafe (Cafe)
+First floor, Ostin Music Center
+Hours
+Monday to Thursday, 7 a.m. to 7 p.m.
+Friday 7 a.m. to 5 p.m.
+Nearby Printing Locations
+Music Library
+Anderson Cafe (Cafe)
+Features Starbucks
+Nearby Printing Locations
+Rosenfeld Library
+Outdoor:
+Bomb Shelter
+Court of Sciences
+Nearby Printing Locations:
+Science and Engineering Library
+Has coffee and food options available
+Physics and Astronomy Building Patio
+3rd Floor Physics and Astronomy Building
+Hours
+Monday to Friday 7 a.m. to 10 p.m.
+Nearby Printing Locations 
+Powell Library, Music Library
+Nearby coffee/food
+Ackerman Union
+Bunche Tables
+In front of Bunche Hall
+Nearby Printing Locations
+YRL
+Nearby coffee/food 
+North Campus Student Center
+Has outlets
+Powel Tables
+Between Powell and Humanities Building
+Nearby Printing Locations 
+Powell Library
+Nearby coffee/food
+Kerchkoff Coffee House
+Has outlets
+Sunset Canyon Recreation Center
+The Hill
+Nearby Printing Locations
+The Study
+Nearby Coffee/Food
+The Study
+No outlets
+
+
+Hill:
+Sproul Landing Living Room
+24 Hour
+WEPA print station
+Nearby coffee/food
+Bruin Plate, Bruin Café, Cafe 1919
+Noise Level Options 
+Medium, Group work
+Bruin Cafe
+Next to Sproul Hall
+Nearby Printing Locations: Sunset Village Learning Center
+Any dining hall if you want to eat & study
+Can carry your laptop in but no backpacks allowed
+Hours vary by location
+Westwood:
+Upside Down
+10962 Le Conte Ave.
+Hours
+Tuesday through Thursday, 9 a.m. to 3 p.m.
+Free Wi-Fi
+Ministry of Coffee
+1010 Glendon Ave.
+Hours
+Monday through Sunday, 7 a.m. to 5 p.m.
+Free Wi-Fi
+`
+
 const SpotFinder = () => {
     const [questions, setQuestions] = useState([indoorsOutdoorsQuestion]);
     const [imageSource, setImageSource] = useState(coverImage);
+    const [altText, setAltText]=useState("Cover Art: What UCLA study space is best for you?");
     const [isImageOpen, setIsImageOpen] = useState(false);
 
     const handleRestart = () => {
         setQuestions([indoorsOutdoorsQuestion]);
         setImageSource(coverImage);
+        setAltText("Cover Art: What UCLA study space is best for you?");
         indoorsOutdoorsQuestion.answerOptions.map((choices)=>{
             choices.selected = false;
         })
@@ -21,7 +167,8 @@ const SpotFinder = () => {
     const showAll = () => {
         setQuestions([indoorsOutdoorsQuestion]);
         setImageSource(allLocations);
-        if (window.matchMedia("only screen and (max-width: 700px)").matches) setIsImageOpen(true);
+        setAltText(allAltText)
+        if (window.matchMedia("only screen and (max-width: 900px)").matches) setIsImageOpen(true);
         indoorsOutdoorsQuestion.answerOptions.map((choices)=>{
             choices.selected = false;
         })
@@ -37,10 +184,12 @@ const SpotFinder = () => {
                 choices.selected = false;
             })
             setImageSource(coverImage);
+            setAltText("Cover Art: What UCLA study space is best for you?");
             newQuestions.push(option.nextQuestion);
         } else {
             setImageSource(option.image);
-            if (window.matchMedia("only screen and (max-width: 700px)").matches) setIsImageOpen(true);
+            setAltText(option.alt);
+            if (window.matchMedia("only screen and (max-width: 900px)").matches) setIsImageOpen(true);
         }
         setQuestions([...newQuestions]);
         
@@ -87,7 +236,7 @@ const SpotFinder = () => {
                 </div>
             </div>
             <div className='image-container'>
-                {imageSource ? <img className='result' src={imageSource} onClick={() => setIsImageOpen(true)}></img> : null}
+                {imageSource ? <img className='result' src={imageSource} alt = {altText} onClick={() => setIsImageOpen(true)}></img> : null}
             </div>
             
         </div>
