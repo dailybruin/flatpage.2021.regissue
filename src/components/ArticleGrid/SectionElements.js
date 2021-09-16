@@ -1,34 +1,77 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import { colors, mediaQueries } from '../../shared/config';
-import ArticleCard from './ArticleCard';
+import { colors, mediaQueries, fonts } from '../../shared/config'
+import ArticleCard from './ArticleCard'
 
 export const SectionContainer = styled.div`
   text-align: center;
   /* justify-content: center; */
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
-  padding-bottom: 10vh;
+  padding-bottom: 15vh;
   /* margin-left: 2vw; */
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
   /* border: 1px solid green; */
-`;
+`
 
-export const SectionHeader = styled.h2`
-  margin-top: 10vh;
-  margin-bottom: 5vh;
+export const SectionHeader = styled.div`
+  margin-left: auto;
+  margin-right: auto;
   text-transform: uppercase;
-  font-family: Bebas Neue, monospace;
+  font-family: ${fonts.section_headline};
   font-style: normal;
   font-weight: normal;
   font-size: 1em;
   line-height: 1.5;
   font-size: 4.5rem;
-  color: black;
+  /* color: ${({ type }) =>
+    type === 'NEWS'
+      ? colors.blue
+      : type === 'SPORTS'
+      ? colors.green
+      : colors.black}; */
+  /* color: red; */
+  /* padding: 10px 60px; */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
+  align-items: center;
+  justify-content: center;
+  max-height: 250px;
+  margin-bottom: 6vh;
+`
 
-  text-align: left;
-  /* border: 1px solid red; */
-`;
+export const SectionHeaderOutline = styled.div`
+  /* margin-top: 10vh;
+  margin-bottom: 5vh; */
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+  font-family: ${fonts.section_headline};
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.5;
+  font-size: 4.5rem;
+  /* color: ${({ type }) =>
+    type === 'NEWS'
+      ? colors.blue
+      : type === 'SPORTS'
+      ? colors.green
+      : colors.black}; */
+  /* color: red; */
+  /* padding: 10px 60px; */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
+  align-items: center;
+  justify-content: center;
+  max-height: 250px;
+  padding: 0px 5px 0px 5px;
+
+  border: 6px solid;
+  border-radius: 50px;
+`
 
 export const SectionCaption = styled.p`
   font-family: Karla, monospace;
@@ -42,13 +85,13 @@ export const SectionCaption = styled.p`
   padding: 0vh 0vw;
   /* border: 1px solid red; */
   margin-bottom: 5vh;
-`;
+`
 
 export const Grid = styled.div`
   /* width: 100%; */
   display: grid;
   grid-template-columns: repeat(
-    ${({ section, size }) => (size === 1 ? 1 : size < 4 ? 2 : 4)},
+    ${({ section, size }) => (size === 1 ? 1 : size < 4 ? 2 : 3)},
     1fr
   );
   row-gap: 5vh;
@@ -74,7 +117,7 @@ export const Grid = styled.div`
   /* &:first-child {
     grid-column: 1 / span 3;
   } */
-`;
+`
 
 export const SectionsLayout = styled.div`
   /* width: calc(100vw - 2em); */
@@ -85,11 +128,11 @@ export const SectionsLayout = styled.div`
   padding-left: 3.5vw;
   padding-right: 3.5vw;
   padding-top: 14vh;
-`;
+`
 
 export const StyledArticleCard = styled(ArticleCard)`
   /* ::first-child {
     grid-column: 1 / span 2;
   } */
   align-self: center;
-`;
+`

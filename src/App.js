@@ -6,9 +6,7 @@ import StoriesPage from './components/ArticleGrid'
 import styled, { keyframes } from "styled-components";
 import { mediaQueries } from "./shared/config";
 import PowellDesktop from './assets/landing_desktop.gif';
-import PowellMobile from './assets/landing_mobile.gif';
-
-import SpotFinder from './components/SpotFinder';
+import Staff from './components/Staff'
 
 const RenderGIF = styled("img")`
   width: 100%;
@@ -17,7 +15,6 @@ const RenderGIF = styled("img")`
 `;
 const DBHeader = styled("div")`
   z-index: 2001;
-
   position: fixed;
   background: ${colors.yellow};
   width: 100%;
@@ -33,18 +30,13 @@ const DBHeader = styled("div")`
   border-bottom: 2px solid black;
 `;
 
-function initializeReactGA() {
-  ReactGA.initialize('UA-28181852-32');
-  ReactGA.pageview('/homepage');
-}
 
 function App() {
-  initializeReactGA();
   const [data, setData] = useState(null);
 
   useEffect(() => {
     fetch(
-      'https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2021.grad-issue'
+      'https://kerckhoff.dailybruin.com/api/packages/flatpages/flatpage.2021.registration-issue'
     )
       .then((res) => res.json())
       .then((res) => setData(res.data['article.aml']));
@@ -55,11 +47,10 @@ function App() {
 
   return (
     <>
-    <SpotFinder></SpotFinder>
-        {/* <DBHeader />
+        <DBHeader />
           <RenderGIF src={PowellDesktop}></RenderGIF>
-        
-        <StoriesPage data={data}/> */}
+        <StoriesPage data={data}/>
+        <Staff data={data} />
       </>
   );
 }
