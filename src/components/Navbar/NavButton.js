@@ -9,26 +9,27 @@ const StyledButton = styled.button`
   max-height: 80px;
   border: 1px solid black;
 
-  background: ${props => props.highlight ? colors.pink : colors.yellow};
+  background: ${props => props.highlight ? colors.yellow : colors.bg};
   ${mediaQueries.notTablet} {
-    border-left: 0;
+    border-left: ${props => props.first ? "1px solid black" : "0"};
     transition: 0.3s;
     &:hover {
-      background: ${colors.lightYellow};
+      background: white;
     }
   }
   ${mediaQueries.tablet} {
     &:active {
-      background: ${colors.lightYellow};
+      background: white;
     }
     margin-right: 10px;
     margin-bottom: 10px;
   }
 
-  font-family: Bebas Neue;
+  font-family: Prompt;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 18px;
+  line-height: 27px;
   color: #000000;
 
   /* identical to box height */
@@ -44,6 +45,7 @@ const NavButton = (props) => {
   return (
     <StyledButton
       highlight={props.highlight}
+      first={props.first}
       onClick={() => {
         const target = document.getElementById(props.section)
         if (target) {
@@ -58,6 +60,7 @@ const NavButton = (props) => {
 }
 
 NavButton.propTypes = {
+  first: PropTypes.bool,
   section: PropTypes.string.isRequired,
   highlight: PropTypes.bool
 }

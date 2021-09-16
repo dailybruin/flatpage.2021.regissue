@@ -10,13 +10,14 @@ import footer_image from './images/db_footer.svg';
 const mql = window.matchMedia(`(min-width: 800px)`);
 
 const FooterDiv = styled.div`
-  position: fixed;
+  position: static;
   left: 0px;
   bottom: 2px;
   height: 150px;
   width: 100%;
   font-family: ITC Century;
   text-align: center;
+  margin-top: 70px;
   h1 {
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
@@ -25,15 +26,14 @@ const FooterDiv = styled.div`
 
 const Socials = styled.div`
   margin-top: 15px;
+  margin-bottom: 50px;
   align-content: center;
   text-align: center;
   img {
-    margin: 0 15px;
+    margin: 0 10px;
   }
   p {
-    ${mediaQueries.mobile} {
-      margin-top: 20px;
-    }
+    margin-top: 70px;
   }
 `;
 
@@ -43,24 +43,24 @@ export default function Footer(props) {
       <img src={footer_image} />
       <Socials>
         <a href="https://www.instagram.com/dailybruin" target="_blank">
-          <img src={insta} style={{ width: '3%' }} />
+          <img src={insta} style={{ width: '30px' }} />
         </a>
         <a href="https://www.facebook.com/dailybruin" target="_blank">
-          <img src={fb} style={{ width: '3%' }} />
+          <img src={fb} style={{ width: '30px' }} />
         </a>
         <a href="https://www.twitter.com/dailybruin" target="_blank">
-          <img src={twitter} style={{ width: '3%' }} />
+          <img src={twitter} style={{ width: '30px' }} />
         </a>
         <a href="https://www.tiktok.com/@dailybruin" target="_blank">
-          <img src={tiktok} style={{ width: '3%' }} />
+          <img src={tiktok} style={{ width: '30px' }} />
         </a>
         <a href="http://eepurl.com/cFEiZX" target="_blank">
-          <img src={email} style={{ width: '3%' }} />
+          <img src={email} style={{ width: '30px' }} />
         </a>
         <p>
           Built with Suzy’s ♥ in Kerckhoff 118 by Mattie Sanseverino, Sunny Li,
           Aritra Mullick, Tommy Vo Tran and Charles Liu. <br></br>Designed by
-          Binxuan Zhang, Lauren Ho, Maya O’Kelly and Rachel Kwan.
+          Maya O'Kelly, Rachel Kwan &amp; Benny Zhang.
         </p>
       </Socials>
     </FooterDiv>

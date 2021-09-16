@@ -10,15 +10,19 @@ import Staff from './components/Staff'
 import LikeWhatYouSeeBox from './components/LikeWhatYouSeeBox'
 import BoardingPass from './components/BoardingPass'
 
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
 const RenderGIF = styled("img")`
   width: 100%;
   height: 100vh;
-  
 `;
 const DBHeader = styled("div")`
   z-index: 2001;
-  position: fixed;
-  background: ${colors.yellow};
+
+  position: relative;
+  background: black;
   width: 100%;
   padding: 0.5em 0;
   color: black;
@@ -29,6 +33,7 @@ const DBHeader = styled("div")`
   text-transform: uppercase;
   font-size: 18px;
   line-height: 21.6px;
+  color: white;
   border-bottom: 2px solid black;
 `;
 
@@ -49,12 +54,14 @@ function App() {
 
   return (
     <>
-        <DBHeader />
+        <Header />
           <RenderGIF src={PowellDesktop}></RenderGIF>
+        <Navbar />
         <BoardingPass/>
         <StoriesPage data={data}/>
           <LikeWhatYouSeeBox/>
         <Staff data={data} />
+          <Footer/>
       </>
   );
 }
