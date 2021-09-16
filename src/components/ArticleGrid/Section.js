@@ -1,6 +1,6 @@
 import React from 'react'
 import BannerAd from '../BannerAd'
-import MyMap from '../Map'
+import SpotFinder from '../SpotFinder'
 import NEWS_HEADLINE_SVG from '../../assets/NEWS_HEADLINE.svg'
 import SPORTS_HEADLINE_SVG from '../../assets/SPORTS_HEADLINE.svg'
 import ARTS_HEADLINE_SVG from '../../assets/ARTS_HEADLINE.svg'
@@ -26,11 +26,10 @@ const Section = (props) => {
     colors.pastelLightYellow,
   ]
   const NUM_COLORS = BYLINE_COLORS.length;
-  if (props.data.type === 'Trivia Map') {
+  if (props.data.type === 'GraphicsInteractive') {
     return (
       <SectionContainer id={props.data.type}>
-        <SectionHeader>{props.data.type}</SectionHeader>
-        <MyMap></MyMap>
+        <SpotFinder></SpotFinder>
         <BannerAd data={props.data} />
       </SectionContainer>
     )

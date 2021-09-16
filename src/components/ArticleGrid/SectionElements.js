@@ -6,11 +6,11 @@ import ArticleCard from './ArticleCard'
 export const SectionContainer = styled.div`
   text-align: center;
   /* justify-content: center; */
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
-  padding-bottom: 10vh;
+  padding-bottom: 15vh;
   /* margin-left: 2vw; */
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
   /* border: 1px solid green; */
 `
 
@@ -38,6 +38,7 @@ export const SectionHeader = styled.div`
   align-items: center;
   justify-content: center;
   max-height: 250px;
+  margin-bottom: 6vh;
 `
 
 export const SectionHeaderOutline = styled.div`

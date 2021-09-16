@@ -7,6 +7,8 @@ import styled, { keyframes } from "styled-components";
 import { mediaQueries } from "./shared/config";
 import PowellDesktop from './assets/landing_desktop.gif';
 import Staff from './components/Staff'
+import LikeWhatYouSeeBox from './components/LikeWhatYouSeeBox'
+import BoardingPass from './components/BoardingPass'
 
 import Header from './components/Header';
 import Navbar from './components/Navbar';
@@ -41,7 +43,7 @@ function App() {
 
   useEffect(() => {
     fetch(
-      'https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2021.grad-issue'
+      'https://kerckhoff.dailybruin.com/api/packages/flatpages/flatpage.2021.registration-issue'
     )
       .then((res) => res.json())
       .then((res) => setData(res.data['article.aml']));
@@ -52,12 +54,15 @@ function App() {
 
   return (
     <>
-      <Header />
-      <RenderGIF src={PowellDesktop}></RenderGIF>
-      <Navbar />
-      <StoriesPage data={data}/>
-      <Footer/>
-    </>
+        <Header />
+          <RenderGIF src={PowellDesktop}></RenderGIF>
+        <Navbar />
+        <BoardingPass/>
+        <StoriesPage data={data}/>
+          <LikeWhatYouSeeBox/>
+        <Staff data={data} />
+          <Footer/>
+      </>
   );
 }
 
