@@ -36,7 +36,7 @@ const sections = [
   'OPINION',
   'THE QUAD',
   'MULTIMEDIA',
-  'ABOUT'
+  'PRIME'
 ];
 
 const Navbar = (props) => {

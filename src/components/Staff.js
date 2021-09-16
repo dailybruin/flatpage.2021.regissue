@@ -13,12 +13,15 @@ const Title = styled.div`
     text-align: center;
     font-weight: 800;
     margin-bottom:40px;
+    ${mediaQueries.mobile} {
+      font-size: 24px;
+    }
 `
 export const Grid = styled.div`
   display: inline-grid;
   margin-top:20px;
-  margin-left:20%;
-  margin-right:20%;
+  margin-left:10%;
+  margin-right:10%;
   align-self:center;
   text-align: left;
   grid-template-columns: 1fr 1fr;
@@ -45,12 +48,12 @@ export default function Staff(props) {
      <Container>
 
      <Title>Daily Bruin Editorial Staff</Title>
-     <>
+     <div>
       <p style={{"line-height": "20px","align-self":"center","text-align": "center", "margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}><b>Management</b></p>
       <p style={{"line-height": "20px","align-self":"center","text-align": "center","margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}>Genesis Qu | Editor in Chief</p>
       <p style={{"line-height": "20px","align-self":"center","text-align": "center","margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}>Cecile Wu | Managing Editor</p>
       <p style={{"line-height": "20px","align-self":"center","text-align": "center","margin-left":"2em", "margin-right":"2em", "font-family": "'Prompt', sans-serif"}}>Shirley Yao | Digital Managing Editor</p>
-     </>
+     </div>
      <Grid>
         {props.data &&
           <> {props.data.staff.map((info) => {
