@@ -51,10 +51,10 @@ export const FlexDiv10 = styled.div`
   /* text-align: center; */
 
   ${mediaQueries.tablet} {
-    font-size: 2.2vw;
+    font-size: 2.3vw;
   }
   ${mediaQueries.mobile} {
-    font-size: 4vw;
+    font-size: 4.7vw;
   }
 `
 
