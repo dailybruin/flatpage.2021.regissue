@@ -13,7 +13,7 @@ export const SectionContainer = styled.div`
   /* border-bottom: 1px solid black; */
   /* border: 1px solid green; */
   ${mediaQueries.mobile} {
-    padding-bottom: 40px;
+    padding-bottom: 60px;
   }
 `
 
@@ -42,6 +42,10 @@ export const SectionHeader = styled.div`
   justify-content: center;
   max-height: 250px;
   margin-bottom: 6vh;
+  ${mediaQueries.mobile} {
+    margin-bottom: 0;
+  }
+
 `
 
 export const SectionHeaderOutline = styled.div`
@@ -74,6 +78,7 @@ export const SectionHeaderOutline = styled.div`
 
   border: 6px solid;
   border-radius: 50px;
+  
 `
 
 export const SectionCaption = styled.p`
@@ -113,7 +118,7 @@ export const Grid = styled.div`
   ${mediaQueries.mobile} {
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
-    row-gap: 15vh;
+    row-gap: 30px;
     column-gap: 20vw;
   }
 
