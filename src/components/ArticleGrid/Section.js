@@ -38,7 +38,7 @@ const Section = (props) => {
     return (
       <SectionContainer id={props.data.type}>
         <SpotFinder></SpotFinder>
-        <BannerAd data={props.data} />
+        {/* <BannerAd data={props.data} /> */}
       </SectionContainer>
     )
   } else {
@@ -98,7 +98,7 @@ const Section = (props) => {
           <SectionCaption> {props.data.content[0].content}</SectionCaption>
         ) : null}
         <Grid size={props.data.content.length}>{articles}</Grid>
-        <BannerAd data={props.data} />
+        {/* <BannerAd data={props.data} /> */}
       </SectionContainer>
     )
   }
