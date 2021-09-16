@@ -5,6 +5,7 @@ export const Article = styled.div`
   min-height: 10vh;
   height: 40vh;
   display: block;
+  background-color: ${({ color }) => color};
 
   ${mediaQueries.tablet} {
     width: 35vw;
@@ -61,7 +62,7 @@ export const FlexDiv15 = styled.div`
   padding: 0.5vh 0.5vw;
   min-height: 22%;
   height: auto;
-  background-color: ${({ color }) => color};
+  /* background-color: ${({ color }) => color}; */
   box-sizing: border-box;
   border-radius: 5px;
   display: flex;
