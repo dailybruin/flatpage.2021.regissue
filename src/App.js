@@ -5,11 +5,12 @@ import { colors } from './shared/config'
 import StoriesPage from './components/ArticleGrid'
 import styled, { keyframes } from "styled-components";
 import { mediaQueries } from "./shared/config";
-import Landing from './assets/landing.png';
+// import Landing from './assets/landing.png';
 import Staff from './components/Staff'
 import LikeWhatYouSeeBox from './components/LikeWhatYouSeeBox'
 import BoardingPass from './components/BoardingPass'
-
+import LandingHorizontal from './assets/flatpage-horiz-FINAL.gif';
+import LandingVert from './assets/flatpage-vert-FINAL.gif';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -23,7 +24,7 @@ const RenderGIF = styled("img")`
     justify-content: center;
   }
   ${mediaQueries.mobile}{
-    height: 45vh;
+    height: 100vh;
     text-align: center;
     justify-content: center;
   }
@@ -65,11 +66,21 @@ function App() {
       .then((res) => setData(res.data['article.aml']));
   }, []);
 
+  const media = window.matchMedia('(max-width: 750px)');
+    const [isMobile, setIsMobile] = useState(media.matches);
+    console.log(isMobile);
+    media.addEventListener('change', () => {
+        if (media.matches !== isMobile) {
+          setIsMobile(media.matches);
+        }
+    });
+    
 
   return (
     <>
         <Header />
-          <RenderGIF src={Landing}></RenderGIF>
+          {!isMobile && <RenderGIF alt="" src={LandingHorizontal}></RenderGIF>}
+          {isMobile && <RenderGIF alt="" src={LandingVert}></RenderGIF>}
           <LandingCredits>(Emily Dembinski, Katelyn Dang and Harry Song/Daily Bruin staff)</LandingCredits>
         <Navbar />
         <BoardingPass/>
