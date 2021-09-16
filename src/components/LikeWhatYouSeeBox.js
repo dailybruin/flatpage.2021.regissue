@@ -6,9 +6,8 @@ const FlightContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 60px 0px;
     ${mediaQueries.mobile} {
-      margin: 50px 10px;
+      /* margin: 50px 10px; */
     }
 `
 const FlightImage = styled.img`
@@ -18,7 +17,7 @@ const BlueContainer = styled.div`
     /* display: flex; */
     align-items: center;
     justify-content: center;
-    margin: 30px 200px;
+    margin: 80px 200px;
     min-height: 100px;
     border: 4px solid #006FC3;
     border-radius: 10px;

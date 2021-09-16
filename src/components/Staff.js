@@ -4,11 +4,15 @@ import { colors, mediaQueries } from '../shared/config';
 
 
 const Container = styled.div`
-text-align: center;  
+    position: relative;
+    text-align: center;  
+    margin-top: 30px;
+
 `
 const Title = styled.div` 
-    font-family: Prompt;
-    font-size: 64px;
+    font-family: Prompt, serif;
+    position:relative;
+    font-size: 50px;
     line-height: 36px;
     text-align: center;
     font-weight: 800;

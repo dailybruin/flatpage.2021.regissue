@@ -8,7 +8,7 @@ export const SectionContainer = styled.div`
   /* justify-content: center; */
   width: 90%;
   margin: 0 auto;
-  padding-bottom: 15vh;
+  padding-bottom: 80px;
   /* margin-left: 2vw; */
   /* border-bottom: 1px solid black; */
   /* border: 1px solid green; */
