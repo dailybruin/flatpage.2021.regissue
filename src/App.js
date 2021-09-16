@@ -75,21 +75,20 @@ function App() {
         }
     });
     
-
-  return (
-    <>
-        <Header />
-          {!isMobile && <RenderGIF alt="" src={LandingHorizontal}></RenderGIF>}
-          {isMobile && <RenderGIF alt="" src={LandingVert}></RenderGIF>}
-          <LandingCredits>(Emily Dembinski, Katelyn Dang and Harry Song/Daily Bruin staff)</LandingCredits>
-        <Navbar />
-        <BoardingPass/>
-        <StoriesPage data={data}/>
-        <LikeWhatYouSeeBox/>
-        <Staff data={data} />
-        <Footer/>
-      </>
-  );
+      return (
+        <>
+            <Header />
+              {!isMobile && <RenderGIF alt="" src={LandingHorizontal}></RenderGIF>}
+              {isMobile && <RenderGIF alt="" src={LandingVert}></RenderGIF>}
+              <LandingCredits>(Emily Dembinski, Katelyn Dang and Harry Song/Daily Bruin staff)</LandingCredits>
+            <Navbar />
+            <BoardingPass/>
+            <StoriesPage data={data}/>
+              <LikeWhatYouSeeBox/>
+            <Staff data={data} />
+            <Footer/>
+          </>
+      );
 }
 
 export default App;
