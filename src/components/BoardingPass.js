@@ -8,7 +8,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 50px 10px;
+    margin: 0 8vw;
 `
 
 const Image = styled.img`
