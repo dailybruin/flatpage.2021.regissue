@@ -2,23 +2,23 @@ import styled from 'styled-components'
 import { mediaQueries } from '../../shared/config'
 
 export const Article = styled.div`
-  /* border: 0.5px solid #000000; */
-  /* width: 18vw;  Uncomment if you want each card to be smaller but for there to be unequal padding on left and right sides of the grid*/
   min-height: 10vh;
   height: 40vh;
   display: block;
 
   ${mediaQueries.tablet} {
-    width: 30vw;
+    width: 35vw;
     height: 25vh;
   }
   ${mediaQueries.mobile} {
     width: 60vw;
     height: 40vh;
   }
-  /* border: 2px solid yellow; */
+  border: 4px solid black;
   margin: 0 auto;
-  /* /* box-sizing: border-box */
+  box-sizing: border-box;
+  border-radius: 10px;
+  z-index: 6;
 `
 
 export const ArticleImage = styled.img`
@@ -26,38 +26,16 @@ export const ArticleImage = styled.img`
   object-fit: cover;
   height: 100%;
   width: 100%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 `
 
-// export const ArticleHeadline = styled.h3`
-//   font-style: ${(italics) => (italics ? 'italics' : 'normal')};
-//   background: #f9eeb2;
-//   border: 1px solid #000000;
-//   max-height: 100%;
-// `;
-
-// export const ArticleAuthor = styled.div`
-//   text-transform: uppercase;
-//   background-color: #ffb5b5;
-//   border: 1px solid #000000;
-//   font-family: Bebas Neue;
-//   font-size: 18px;
-//   font-style: normal;
-//   font-weight: 400;
-//   line-height: 22px;
-//   letter-spacing: 0em;
-//   text-align: center;
-// `;
-
-// export const FlexDiv = styled.div`
-//   flex-grow: ${(proportion) => (proportion ? proportion : `33`)};
-//   flex-basis: ${(flexBasis) => (flexBasis ? flexBasis : null)};
-// `;
 export const FlexDiv10 = styled.div`
   padding: 0.5vh 0.5vw;
   min-height: 10%;
   height: auto;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
   box-sizing: border-box;
   background-color: ${({ color }) => color};
   display: flex;
@@ -72,20 +50,20 @@ export const FlexDiv10 = styled.div`
   /* text-align: center; */
 
   ${mediaQueries.tablet} {
-    font-size: 3vw;
+    font-size: 2.2vw;
   }
   ${mediaQueries.mobile} {
-    font-size: 5.4vw;
+    font-size: 4vw;
   }
 `
 
 export const FlexDiv15 = styled.div`
   padding: 0.5vh 0.5vw;
-  min-height: 25%;
+  min-height: 22%;
   height: auto;
   background-color: ${({ color }) => color};
-  border: 1px solid black;
   box-sizing: border-box;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,37 +72,44 @@ export const FlexDiv15 = styled.div`
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0em;
+  z-index: 1;
 
   /* overflow: scroll; */
   /* text-align: center; */
   /* justify-items: center; */
 
   ${mediaQueries.tablet} {
-    font-size: 2.8vw;
+    font-size: 1.7vw;
+    padding: 0 0;
+    min-height: 18%;
   }
   ${mediaQueries.mobile} {
-    font-size: 4.8vw;
+    font-size: 4vw;
+    padding: 0 0;
+    min-height: 24%;
   }
 `
 
-export const FlexDiv75 = styled.div`
+export const FlexDiv65 = styled.div`
   height: 65%;
-  /* border: 2px solid red; */
-  border: 1px solid black;
+  /* border-radius: 5px; */
   box-sizing: border-box;
 `
 
 export const FlexDiv85 = styled.div`
   height: 85%;
-  /* border: 2px solid red; */
   border: 1px solid black;
   box-sizing: border-box;
 `
 
 export const ArticleLink = styled.a`
+  padding: 5px;
   width: 100%;
   height: 100%;
   text-decoration: none;
   color: black;
-  /* border: 2px solid darkgreen; */
+  border: 4px solid;
+  border-color: ${({ color }) => color};
+  border-radius: 10px;
+  box-sizing: border-box;
 `

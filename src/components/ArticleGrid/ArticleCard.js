@@ -5,7 +5,7 @@ import {
   ArticleLink,
   FlexDiv10,
   FlexDiv15,
-  FlexDiv75,
+  FlexDiv65,
   FlexDiv85,
 } from './ArticleCardElements'
 
@@ -36,12 +36,12 @@ const ArticleCard = ({ article, key, bylineColor, headlineColor, size }) => {
   }
   if (article.cardSize === undefined || article.cardSize === 'hamburger') {
     return (
-      <ArticleLink href={article.news_url}>
+      <ArticleLink color={bylineColor} href={article.news_url}>
         <Article>
-          <FlexDiv75>
+          <FlexDiv65>
             <ArticleImage src={article.image_url} />
-          </FlexDiv75>
-          <FlexDiv10 color={bylineColor}>By {article.byline}</FlexDiv10>
+          </FlexDiv65>
+          <FlexDiv10 color={bylineColor}>{article.byline}</FlexDiv10>
           <FlexDiv15 color={headlineColor}>{article.image_headline}</FlexDiv15>
         </Article>
       </ArticleLink>
