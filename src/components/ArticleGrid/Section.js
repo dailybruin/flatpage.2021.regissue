@@ -76,7 +76,7 @@ const Section = (props) => {
           {props.data.type === 'OPINION' && (
             <ImageContainer src={OPINION_HEADLINE_SVG} alt="OPINION HEADLINE" />
           )}
-          {props.data.type === 'QUAD' && (
+          {props.data.type === 'THE QUAD' && (
             <ImageContainer src={QUAD_HEADLINE_SVG} alt="QUAD HEADLINE" />
           )}
           {props.data.type === 'PRIME' && (
