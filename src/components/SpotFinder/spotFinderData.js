@@ -1,5 +1,5 @@
 import both from './graphics/both.png';
-import inCoffeeQuiet from './graphics/in-coffee-quiet.png';
+import inCoffeeQuiet from './graphics/in-quiet-coffee.png';
 import inQuietNoCoffee from './graphics/in-quiet-no-coffee.png';
 import inTalkCampus from './graphics/in-talk-campus.png';
 import inTalkHill from './graphics/in-talk-hill.png';
