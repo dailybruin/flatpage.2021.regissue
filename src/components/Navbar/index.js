@@ -28,7 +28,7 @@ const NavbarContainer = styled.div`
   }
 `;
 
-const sections = [
+const sectionNames = [
   'INTERACTIVE',
   'NEWS',
   'SPORTS',
@@ -39,7 +39,18 @@ const sections = [
   'PRIME'
 ];
 
-const Navbar = (props) => {
+const sectionIds = [
+  'GraphicsInteractive',
+  'NEWS',
+  'SPORTS',
+  'ARTS',
+  'OPINION',
+  'THE QUAD',
+  'MULTIMEDIA',
+  'PRIME'
+]
+
+const Navbar = () => {
   const [visibleSection, setVisibleSection] = useState('');
   const media = window.matchMedia('(max-width: 900px)')
   const [isMobile, setIsMobile] = useState(media.matches)
@@ -65,8 +76,8 @@ const Navbar = (props) => {
   });
 
   useEffect(() => {
-    sections.forEach((section) => {
-      const element = document.getElementById(section);
+    sectionIds.forEach((sectionId) => {
+      const element = document.getElementById(sectionId);
       if (element) {
         observer.observe(element);
       }
@@ -74,12 +85,13 @@ const Navbar = (props) => {
   });
 
   const navButtons =
-    sections.map((section, idx) => (
+    sectionNames.map((sectionName, idx) => (
       <NavButton
         first={idx === 0}
-        section={section}
-        key={section}
-        highlight={section === visibleSection}
+        sectionName={sectionName}
+        sectionId={sectionIds[idx]}
+        key={sectionName}
+        highlight={sectionIds[idx] === visibleSection}
       />
     ))
 
