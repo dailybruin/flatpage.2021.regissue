@@ -1,11 +1,15 @@
 import styled from 'styled-components'
 import FlightLogo from '../assets/FlightLogo.svg';
+import { mediaQueries } from '../shared/config';
 
 const FlightContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 60px 0px;
+    ${mediaQueries.mobile} {
+      margin: 50px 10px;
+    }
 `
 const FlightImage = styled.img`
     height: 80px;
@@ -18,6 +22,10 @@ const BlueContainer = styled.div`
     min-height: 100px;
     border: 4px solid #006FC3;
     border-radius: 10px;
+    ${mediaQueries.mobile} {
+      border: none;
+      margin: 0px;
+    }
 `
 const BlackContainer = styled.div`
     margin: 5px 5px;
@@ -26,6 +34,10 @@ const BlackContainer = styled.div`
     display: block;
     position: relative;
     border-radius: 10px;
+    ${mediaQueries.mobile} {
+      padding: 20px;
+      border-radius: 0px;
+    }
 `
 
 const Anchor = styled.a`
@@ -37,6 +49,9 @@ const TextBox = styled.div`
     font-family: American Typewriter, serif;
     text-align: center;
     font-size: 25px;
+    ${mediaQueries.mobile} {
+      font-size: 20px;
+    }
 `
 export default function LikeWhatYouSeeBox(){
     return(
