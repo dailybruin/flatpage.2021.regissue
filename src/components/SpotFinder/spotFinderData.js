@@ -15,7 +15,7 @@ const coffeeQuestion = {
             answerText: 'Coffee',
             nextQuestion: null,
             image: inCoffeeQuiet,
-            alt: `Charles E. Young Research Library: 
+            alt: `Your results: Charles E. Young Research Library: 
             Hours: Monday through Thursday, 8 a.m. to 10 p.m.
             Friday, 8 a.m. to 6 p.m.
             Saturday, 10 a.m. to 6 p.m.
@@ -48,7 +48,7 @@ const coffeeQuestion = {
             answerText: 'No coffee',
             nextQuestion: null,
             image: inQuietNoCoffee,
-            alt: `
+            alt: `Your results:
             Powell Library:
             Hours:
             Monday through Thursday, 8 a.m. to 7 p.m.
@@ -90,7 +90,7 @@ const locationQuestion = {
             answerText: 'Westwood',
             nextQuestion: null,
             image: inTalkWW,
-            alt: `Upside Down
+            alt: `Your results: Upside Down
             10962 Le Conte Ave.
             Hours
             Tuesday through Thursday, 9 a.m. to 3 p.m.
@@ -108,7 +108,7 @@ const locationQuestion = {
             answerText: 'The Hill',
             nextQuestion: null,
             image: inTalkHill,
-            alt: `
+            alt: `Your results:
             Sproul Landing Living Room
             24 Hour
             WEPA print station
@@ -127,7 +127,7 @@ const locationQuestion = {
             answerText: 'Campus',
             nextQuestion: null,
             image: inTalkCampus,
-            alt: `Kerckhoff Coffee House (Cafe)
+            alt: `Your results: Kerckhoff Coffee House (Cafe)
             Second floor of Kerckhoff Hall
             Hours
             Monday through Thursday, 7 a.m. to 11 p.m.
@@ -161,7 +161,7 @@ const outletsQuestion = {
             answerText: 'Outlets',
             nextQuestion: null,
             image: outOutlets,
-            alt:`Bunche Tables
+            alt:`Your results: Bunche Tables
             In front of Bunche Hall
             Nearby Printing Locations
             YRL
@@ -183,7 +183,7 @@ const outletsQuestion = {
             answerText: 'No Outlets',
             nextQuestion: null,
             image: outNoOutlets,
-            alt:`Physics and Astronomy Building Patio
+            alt:`Your results: Physics and Astronomy Building Patio
             3rd Floor Physics and Astronomy Building
             Hours
             Monday to Friday 7 a.m. to 10 p.m.
@@ -236,7 +236,7 @@ const indoorsOutdoorsQuestion = {
             answerText: 'Both',
             nextQuestion: null,
             image: both,
-            alt:`
+            alt:`Your results: 
             Bomb Shelter
             Court of Sciences
             Nearby Printing Locations:

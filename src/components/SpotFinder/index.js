@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import './finder.css';
@@ -6,7 +6,7 @@ import indoorsOutdoorsQuestion from './spotFinderData.js';
 import allLocations from './graphics/all-locations.png';
 import coverImage from './graphics/cover.png';
 
-const allAltText = `Charles E. Young Research Library
+const allAltText = `All available study spots. Charles E. Young Research Library
 North Campus
 Hours
 Monday through Thursday, 8 a.m. to 10 p.m.
@@ -156,6 +156,17 @@ const SpotFinder = () => {
     const [altText, setAltText]=useState("Cover Art: What UCLA study space is best for you?");
     const [isImageOpen, setIsImageOpen] = useState(false);
 
+    const handleLightboxOpen = () => {
+        setTimeout(() => {
+        let img = document.querySelector(".ril-image-current");
+        if (img) {
+            img.alt = altText;
+            img.setAttribute('tabindex', 0);
+        }
+        }, 500);
+        
+    };
+
     const handleRestart = () => {
         setQuestions([indoorsOutdoorsQuestion]);
         setImageSource(coverImage);
@@ -201,6 +212,8 @@ const SpotFinder = () => {
                 <Lightbox
                     mainSrc={imageSource}
                     onCloseRequest={() => {setIsImageOpen(false)}}
+                    onImageLoad={handleLightboxOpen}
+                    alt={altText}
                 />}
             <div className='left-side'>
                 <div className="title-box">
@@ -236,7 +249,7 @@ const SpotFinder = () => {
                 </div>
             </div>
             <div className='image-container'>
-                {imageSource ? <img className='result' src={imageSource} alt = {altText} onClick={() => setIsImageOpen(true)}></img> : null}
+                {imageSource ? <img className='result' src={imageSource} alt = {altText} tabindex={0} onClick={() => setIsImageOpen(true)}></img> : null}
             </div>
             
         </div>
