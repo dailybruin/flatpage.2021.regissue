@@ -7,6 +7,7 @@ import styled, { keyframes } from "styled-components";
 import { mediaQueries } from "./shared/config";
 import PowellDesktop from './assets/landing_desktop.gif';
 import Staff from './components/Staff'
+import BoardingPass from './components/BoardingPass'
 
 const RenderGIF = styled("img")`
   width: 100%;
@@ -50,6 +51,7 @@ function App() {
     <>
         <DBHeader />
           <RenderGIF src={PowellDesktop}></RenderGIF>
+        <BoardingPass/>
         <StoriesPage data={data}/>
         <Staff data={data} />
       </>
