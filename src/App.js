@@ -5,7 +5,7 @@ import { colors } from './shared/config'
 import StoriesPage from './components/ArticleGrid'
 import styled, { keyframes } from "styled-components";
 import { mediaQueries } from "./shared/config";
-import PowellDesktop from './assets/landing_desktop.gif';
+import Landing from './assets/landing.png';
 import Staff from './components/Staff'
 import LikeWhatYouSeeBox from './components/LikeWhatYouSeeBox'
 import BoardingPass from './components/BoardingPass'
@@ -17,6 +17,17 @@ import Footer from './components/Footer';
 const RenderGIF = styled("img")`
   width: 100%;
   height: 100vh;
+  ${mediaQueries.mobile}{
+    height: 45vh;
+    text-align: center;
+    justify-content: center;
+  }
+`;
+
+const LandingCredits = styled.div`
+  text-align: right;
+  margin-right: 10px;
+  font-style: italic;
 `;
 const DBHeader = styled("div")`
   z-index: 2001;
@@ -55,7 +66,8 @@ function App() {
   return (
     <>
         <Header />
-          <RenderGIF src={PowellDesktop}></RenderGIF>
+          <RenderGIF src={Landing}></RenderGIF>
+          <LandingCredits>(Emily Dembinski, Katelyn Dang and Harry Song/Daily Bruin staff)</LandingCredits>
         <Navbar />
         <BoardingPass/>
         <StoriesPage data={data}/>

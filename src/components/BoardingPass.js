@@ -2,12 +2,20 @@ import styled from 'styled-components';
 import React, {useState} from 'react'
 import BoardingPassSVG from '../assets/BoardingPass.svg';
 import Passport from '../assets/Passport.svg';
+import { mediaQueries } from '../shared/config';
 
 const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 50px 10px;
+`
+
+const Image = styled.img`
+    width: 100%;
+    ${mediaQueries.mobile}{
+        width: 60%;
+  }
 `
 
 export default function BoardingPass(){
@@ -22,7 +30,7 @@ export default function BoardingPass(){
     return(
         <>
             {isMobile && <Container> <img src={Passport}/> </Container>}
-            {!isMobile && <Container> <img src={BoardingPassSVG}/> </Container>}
+            {!isMobile && <Container> <Image src={BoardingPassSVG}/> </Container>}
         </>
     )
 }
