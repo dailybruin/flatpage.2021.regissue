@@ -85,7 +85,7 @@ function App() {
         <Navbar />
         <BoardingPass/>
         <StoriesPage data={data}/>
-          <LikeWhatYouSeeBox/>
+        <LikeWhatYouSeeBox/>
         <Staff data={data} />
         <Footer/>
       </>

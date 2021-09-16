@@ -13,14 +13,14 @@ const ArticleCard = ({ article, key, bylineColor, headlineColor, size }) => {
   if (article.type === 'paragraph') {
     return <div></div>
   }
-  if (article.type === 'ad') {
-    console.log('Ad card found: ' + article.zone)
-    return (
-      <Article>
-        <broadstreet-zone zone-id={article.zone}></broadstreet-zone>
-      </Article>
-    )
-  }
+  // if (article.type === 'ad') {
+  //   console.log('Ad card found: ' + article.zone)
+  //   return (
+  //     <Article>
+  //       <broadstreet-zone zone-id={article.zone}></broadstreet-zone>
+  //     </Article>
+  //   )
+  // }
   if (article.type === 'image_card') {
     // -30- card
     return (
