@@ -17,7 +17,6 @@ const RenderGIF = styled("img")`
 `;
 const DBHeader = styled("div")`
   z-index: 2001;
-
   position: fixed;
   background: ${colors.yellow};
   width: 100%;
