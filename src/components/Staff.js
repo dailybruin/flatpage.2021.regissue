@@ -38,7 +38,7 @@ export const Grid = styled.div`
   ${mediaQueries.mobile} {
     grid-template-columns: repeat(1, 1fr);
     
-    row-gap: 15vh;
+    row-gap: 10px;
     column-gap: 20vw;
   }
 

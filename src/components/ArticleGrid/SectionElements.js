@@ -12,6 +12,9 @@ export const SectionContainer = styled.div`
   /* margin-left: 2vw; */
   /* border-bottom: 1px solid black; */
   /* border: 1px solid green; */
+  ${mediaQueries.mobile} {
+    padding-bottom: 40px;
+  }
 `
 
 export const SectionHeader = styled.div`

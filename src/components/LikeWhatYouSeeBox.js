@@ -12,6 +12,9 @@ const FlightContainer = styled.div`
 `
 const FlightImage = styled.img`
     height: 80px;
+    ${mediaQueries.mobile} {
+      height: 60px;
+    }
 `
 const BlueContainer = styled.div`
     /* display: flex; */
@@ -23,7 +26,7 @@ const BlueContainer = styled.div`
     border-radius: 10px;
     ${mediaQueries.mobile} {
       border: none;
-      margin: 0px;
+      margin: 40px;
     }
 `
 const BlackContainer = styled.div`
@@ -49,7 +52,7 @@ const TextBox = styled.div`
     text-align: center;
     font-size: 25px;
     ${mediaQueries.mobile} {
-      font-size: 20px;
+      font-size: 15px;
     }
 `
 export default function LikeWhatYouSeeBox(){
