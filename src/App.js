@@ -8,6 +8,7 @@ import { mediaQueries } from "./shared/config";
 import PowellDesktop from './assets/landing_desktop.gif';
 import Staff from './components/Staff'
 import LikeWhatYouSeeBox from './components/LikeWhatYouSeeBox'
+import BoardingPass from './components/BoardingPass'
 
 const RenderGIF = styled("img")`
   width: 100%;
@@ -49,8 +50,12 @@ function App() {
 
   return (
     <>
-        <LikeWhatYouSeeBox/>
-
+        <DBHeader />
+          <RenderGIF src={PowellDesktop}></RenderGIF>
+        <BoardingPass/>
+        <StoriesPage data={data}/>
+          <LikeWhatYouSeeBox/>
+        <Staff data={data} />
       </>
   );
 }
