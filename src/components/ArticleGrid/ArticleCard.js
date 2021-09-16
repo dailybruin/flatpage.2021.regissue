@@ -14,10 +14,10 @@ const ArticleCard = ({ article, key, bylineColor, headlineColor, size }) => {
     return <div></div>
   }
   if (article.type === 'ad') {
-    console.log('ad!!')
+    console.log("Ad card found: " + article.zone)
     return (
       <Article>
-        <broadstreet-zone zone-id="89668"></broadstreet-zone>
+        <broadstreet-zone zone-id={article.zone}></broadstreet-zone>
       </Article>
     )
   }

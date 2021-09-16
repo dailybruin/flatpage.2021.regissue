@@ -21,14 +21,19 @@ const ImageContainer = styled.img`
   max-width: 100%;
 `
 const Section = (props) => {
-  const BYLINE_COLORS = [colors.pastelRed, colors.pastelGreen, colors.pastelBlue, colors.pastelYellow];
+  const BYLINE_COLORS = [
+    colors.pastelRed,
+    colors.pastelGreen,
+    colors.pastelBlue,
+    colors.pastelYellow,
+  ]
   const HEADLINE_COLORS = [
     colors.pastelLightRed,
     colors.pastelLightGreen,
     colors.pastelLightBlue,
     colors.pastelLightYellow,
   ]
-  const NUM_COLORS = BYLINE_COLORS.length;
+  const NUM_COLORS = BYLINE_COLORS.length
   if (props.data.type === 'GraphicsInteractive') {
     return (
       <SectionContainer id={props.data.type}>
@@ -83,14 +88,17 @@ const Section = (props) => {
             <ImageContainer src={PRIME_HEADLINE_SVG} alt="PRIME HEADLINE" />
           )}
           {props.data.type === 'MULTIMEDIA' && (
-            <ImageContainer src={MULTIMEDIA_HEADLINE_SVG} alt="MULTIMEDIA HEADLINE" />
+            <ImageContainer
+              src={MULTIMEDIA_HEADLINE_SVG}
+              alt="MULTIMEDIA HEADLINE"
+            />
           )}
         </SectionHeader>
-        <BannerAd data={props.data} />
         {props.data.content[0].type === 'paragraph' ? (
           <SectionCaption> {props.data.content[0].content}</SectionCaption>
         ) : null}
         <Grid size={props.data.content.length}>{articles}</Grid>
+        <BannerAd data={props.data} />
       </SectionContainer>
     )
   }
