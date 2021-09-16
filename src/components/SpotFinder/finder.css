@@ -118,6 +118,7 @@
 .result{
     width: 100%;
     display: block;
+    cursor: pointer;
 }
 .image-container::-webkit-scrollbar {
     -webkit-appearance: none;
