@@ -17,6 +17,11 @@ import Footer from './components/Footer';
 const RenderGIF = styled("img")`
   width: 100%;
   height: 100vh;
+  ${mediaQueries.tablet}{
+    height: 80vh;
+    text-align: center;
+    justify-content: center;
+  }
   ${mediaQueries.mobile}{
     height: 45vh;
     text-align: center;
@@ -60,8 +65,6 @@ function App() {
       .then((res) => setData(res.data['article.aml']));
   }, []);
 
-  // const gradissueData = JSON.parse(data)
-  // console.log(gradissueData)
 
   return (
     <>
@@ -73,7 +76,7 @@ function App() {
         <StoriesPage data={data}/>
           <LikeWhatYouSeeBox/>
         <Staff data={data} />
-          <Footer/>
+        <Footer/>
       </>
   );
 }
