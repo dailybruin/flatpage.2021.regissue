@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { mediaQueries } from '../../shared/config'
+import { mediaQueries, fonts } from '../../shared/config'
 
 export const Article = styled.div`
   min-height: 10vh;
@@ -32,7 +32,7 @@ export const ArticleImage = styled.img`
 `
 
 export const FlexDiv10 = styled.div`
-  padding: 0.5vh 0.5vw;
+  padding: 0vh 0.5vw;
   min-height: 10%;
   height: auto;
   border-top: 4px solid black;
@@ -44,7 +44,7 @@ export const FlexDiv10 = styled.div`
   justify-content: center;
   font-size: 1.4vw;
 
-  font-family: Bebas Neue;
+  font-family: ${fonts.photo_credit};
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0em;
@@ -69,7 +69,7 @@ export const FlexDiv15 = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 1.2vw;
-  font-family: Karla;
+  font-family: ${fonts.story_headline};
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0em;

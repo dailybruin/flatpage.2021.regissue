@@ -45,7 +45,6 @@ export const SectionHeader = styled.div`
   ${mediaQueries.mobile} {
     margin-bottom: 0;
   }
-
 `
 
 export const SectionHeaderOutline = styled.div`
@@ -78,7 +77,6 @@ export const SectionHeaderOutline = styled.div`
 
   border: 6px solid;
   border-radius: 50px;
-  
 `
 
 export const SectionCaption = styled.p`
@@ -98,10 +96,7 @@ export const SectionCaption = styled.p`
 export const Grid = styled.div`
   /* width: 100%; */
   display: grid;
-  grid-template-columns: repeat(
-    ${({ section, size }) => (size === 1 ? 1 : size < 4 ? 2 : 3)},
-    1fr
-  );
+  grid-template-columns: repeat(3, 1fr);
   row-gap: 5vh;
   column-gap: 5vw;
   padding: 0 0vw;
