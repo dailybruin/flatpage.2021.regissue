@@ -107,13 +107,13 @@ export const Grid = styled.div`
   ${mediaQueries.tablet} {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-    row-gap: 20vh;
-    column-gap: 1vw;
+    row-gap: 5vh;
+    column-gap: 5vw;
   }
   ${mediaQueries.mobile} {
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
-    row-gap: 30px;
+    row-gap: 5vh;
     column-gap: 20vw;
   }
 
