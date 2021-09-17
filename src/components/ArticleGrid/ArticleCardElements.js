@@ -12,8 +12,8 @@ export const Article = styled.div`
     height: 25vh;
   }
   ${mediaQueries.mobile} {
-    width: 60vw;
-    height: 40vh;
+    width: 80vw;
+    height: 45vh;
   }
   border: 4px solid black;
   margin: 0 auto;
@@ -54,7 +54,7 @@ export const FlexDiv10 = styled.div`
     font-size: 2.3vw;
   }
   ${mediaQueries.mobile} {
-    font-size: 4.7vw;
+    font-size: 4.0vw;
   }
 `
 
@@ -87,7 +87,7 @@ export const FlexDiv15 = styled.div`
   ${mediaQueries.mobile} {
     font-size: 4vw;
     padding: 0 0;
-    min-height: 24%;
+    min-height: 20%;
   }
 `
 

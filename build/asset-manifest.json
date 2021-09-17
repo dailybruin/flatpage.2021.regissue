@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "./static/css/main.33d43df4.chunk.css",
-    "main.js": "./static/js/main.9536cfd6.chunk.js",
-    "main.js.map": "./static/js/main.9536cfd6.chunk.js.map",
+    "main.css": "./static/css/main.1bf783f6.chunk.css",
+    "main.js": "./static/js/main.4b8aec77.chunk.js",
+    "main.js.map": "./static/js/main.4b8aec77.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.0169ed69.js",
     "runtime-main.js.map": "./static/js/runtime-main.0169ed69.js.map",
     "static/css/2.ab18fb39.chunk.css": "./static/css/2.ab18fb39.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.bf0f52db.chunk.js.map": "./static/js/3.bf0f52db.chunk.js.map",
     "index.html": "./index.html",
     "static/css/2.ab18fb39.chunk.css.map": "./static/css/2.ab18fb39.chunk.css.map",
-    "static/css/main.33d43df4.chunk.css.map": "./static/css/main.33d43df4.chunk.css.map",
+    "static/css/main.1bf783f6.chunk.css.map": "./static/css/main.1bf783f6.chunk.css.map",
     "static/js/2.12b1374d.chunk.js.LICENSE.txt": "./static/js/2.12b1374d.chunk.js.LICENSE.txt",
     "static/media/ARTS_HEADLINE.b23ca5b8.svg": "./static/media/ARTS_HEADLINE.b23ca5b8.svg",
     "static/media/BoardingPass.ad80074c.svg": "./static/media/BoardingPass.ad80074c.svg",
@@ -30,12 +30,13 @@
     "static/media/cover.115267d2.png": "./static/media/cover.115267d2.png",
     "static/media/db.0b57423e.svg": "./static/media/db.0b57423e.svg",
     "static/media/db_footer.9e83d417.svg": "./static/media/db_footer.9e83d417.svg",
+    "static/media/flatpage-horiz-FINAL.db6be916.gif": "./static/media/flatpage-horiz-FINAL.db6be916.gif",
+    "static/media/flatpage-vert-FINAL.b948a69e.gif": "./static/media/flatpage-vert-FINAL.b948a69e.gif",
     "static/media/in-quiet-coffee.13bb8cae.png": "./static/media/in-quiet-coffee.13bb8cae.png",
     "static/media/in-quiet-no-coffee.bb3f03a6.png": "./static/media/in-quiet-no-coffee.bb3f03a6.png",
     "static/media/in-talk-campus.c2202908.png": "./static/media/in-talk-campus.c2202908.png",
     "static/media/in-talk-hill.3ac2b9e0.png": "./static/media/in-talk-hill.3ac2b9e0.png",
     "static/media/in-talk-ww.24502fd4.png": "./static/media/in-talk-ww.24502fd4.png",
-    "static/media/landing_desktop.d1d8d8db.gif": "./static/media/landing_desktop.d1d8d8db.gif",
     "static/media/menu.3ccb89a3.svg": "./static/media/menu.3ccb89a3.svg",
     "static/media/out-no-outlets.09fadca6.png": "./static/media/out-no-outlets.09fadca6.png",
     "static/media/out-outlets.aa86e107.png": "./static/media/out-outlets.aa86e107.png",
@@ -45,7 +46,7 @@
     "static/js/runtime-main.0169ed69.js",
     "static/css/2.ab18fb39.chunk.css",
     "static/js/2.12b1374d.chunk.js",
-    "static/css/main.33d43df4.chunk.css",
-    "static/js/main.9536cfd6.chunk.js"
+    "static/css/main.1bf783f6.chunk.css",
+    "static/js/main.4b8aec77.chunk.js"
   ]
 }
