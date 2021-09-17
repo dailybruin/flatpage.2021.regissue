@@ -8,10 +8,13 @@ export const SectionContainer = styled.div`
   /* justify-content: center; */
   width: 90%;
   margin: 0 auto;
-  padding-bottom: 15vh;
+  padding-bottom: 80px;
   /* margin-left: 2vw; */
   /* border-bottom: 1px solid black; */
   /* border: 1px solid green; */
+  ${mediaQueries.mobile} {
+    padding-bottom: 60px;
+  }
 `
 
 export const SectionHeader = styled.div`
@@ -39,6 +42,9 @@ export const SectionHeader = styled.div`
   justify-content: center;
   max-height: 250px;
   margin-bottom: 6vh;
+  ${mediaQueries.mobile} {
+    margin-bottom: 0;
+  }
 `
 
 export const SectionHeaderOutline = styled.div`
@@ -90,10 +96,7 @@ export const SectionCaption = styled.p`
 export const Grid = styled.div`
   /* width: 100%; */
   display: grid;
-  grid-template-columns: repeat(
-    ${({ section, size }) => (size === 1 ? 1 : size < 4 ? 2 : 3)},
-    1fr
-  );
+  grid-template-columns: repeat(3, 1fr);
   row-gap: 5vh;
   column-gap: 5vw;
   padding: 0 0vw;
@@ -104,13 +107,13 @@ export const Grid = styled.div`
   ${mediaQueries.tablet} {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-    row-gap: 20vh;
-    column-gap: 1vw;
+    row-gap: 5vh;
+    column-gap: 5vw;
   }
   ${mediaQueries.mobile} {
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
-    row-gap: 15vh;
+    row-gap: 5vh;
     column-gap: 20vw;
   }
 

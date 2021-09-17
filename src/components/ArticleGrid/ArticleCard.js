@@ -13,14 +13,14 @@ const ArticleCard = ({ article, key, bylineColor, headlineColor, size }) => {
   if (article.type === 'paragraph') {
     return <div></div>
   }
-  if (article.type === 'ad') {
-    console.log('ad!!')
-    return (
-      <Article>
-        <broadstreet-zone zone-id="89668"></broadstreet-zone>
-      </Article>
-    )
-  }
+  // if (article.type === 'ad') {
+  //   console.log('Ad card found: ' + article.zone)
+  //   return (
+  //     <Article>
+  //       <broadstreet-zone zone-id={article.zone}></broadstreet-zone>
+  //     </Article>
+  //   )
+  // }
   if (article.type === 'image_card') {
     // -30- card
     return (
@@ -37,7 +37,7 @@ const ArticleCard = ({ article, key, bylineColor, headlineColor, size }) => {
   if (article.cardSize === undefined || article.cardSize === 'hamburger') {
     return (
       <ArticleLink color={bylineColor} href={article.news_url}>
-        <Article>
+        <Article color={headlineColor}>
           <FlexDiv65>
             <ArticleImage src={article.image_url} />
           </FlexDiv65>

@@ -9,6 +9,7 @@ import QUAD_HEADLINE_SVG from '../../assets/QUAD_HEADLINE.svg'
 import PRIME_HEADLINE_SVG from '../../assets/PRIME_HEADLINE.svg'
 import MULTIMEDIA_HEADLINE_SVG from '../../assets/MULTIMEDIA_HEADLINE.svg'
 import { colors } from '../../shared/config'
+import styled from 'styled-components'
 import {
   Grid,
   SectionContainer,
@@ -16,21 +17,28 @@ import {
   SectionCaption,
   StyledArticleCard,
 } from './SectionElements'
-
+const ImageContainer = styled.img`
+  max-width: 100%;
+`
 const Section = (props) => {
-  const BYLINE_COLORS = [colors.pastelRed, colors.pastelGreen, colors.pastelBlue, colors.pastelYellow];
+  const BYLINE_COLORS = [
+    colors.pastelRed,
+    colors.pastelGreen,
+    colors.pastelBlue,
+    colors.pastelYellow,
+  ]
   const HEADLINE_COLORS = [
     colors.pastelLightRed,
     colors.pastelLightGreen,
     colors.pastelLightBlue,
     colors.pastelLightYellow,
   ]
-  const NUM_COLORS = BYLINE_COLORS.length;
+  const NUM_COLORS = BYLINE_COLORS.length
   if (props.data.type === 'GraphicsInteractive') {
     return (
       <SectionContainer id={props.data.type}>
         <SpotFinder></SpotFinder>
-        <BannerAd data={props.data} />
+        {/* <BannerAd data={props.data} /> */}
       </SectionContainer>
     )
   } else {
@@ -62,32 +70,35 @@ const Section = (props) => {
       <SectionContainer id={props.data.type}>
         <SectionHeader>
           {props.data.type === 'NEWS' && (
-            <img src={NEWS_HEADLINE_SVG} alt="NEWS HEADLINE" />
+            <ImageContainer src={NEWS_HEADLINE_SVG} alt="NEWS HEADLINE" />
           )}
           {props.data.type === 'SPORTS' && (
-            <img src={SPORTS_HEADLINE_SVG} alt="SPORTS HEADLINE" />
+            <ImageContainer src={SPORTS_HEADLINE_SVG} alt="SPORTS HEADLINE" />
           )}
           {props.data.type === 'ARTS' && (
-            <img src={ARTS_HEADLINE_SVG} alt="ARTS HEADLINE" />
+            <ImageContainer src={ARTS_HEADLINE_SVG} alt="ARTS HEADLINE" />
           )}
           {props.data.type === 'OPINION' && (
-            <img src={OPINION_HEADLINE_SVG} alt="OPINION HEADLINE" />
+            <ImageContainer src={OPINION_HEADLINE_SVG} alt="OPINION HEADLINE" />
           )}
-          {props.data.type === 'QUAD' && (
-            <img src={QUAD_HEADLINE_SVG} alt="QUAD HEADLINE" />
+          {props.data.type === 'THE QUAD' && (
+            <ImageContainer src={QUAD_HEADLINE_SVG} alt="QUAD HEADLINE" />
           )}
           {props.data.type === 'PRIME' && (
-            <img src={PRIME_HEADLINE_SVG} alt="PRIME HEADLINE" />
+            <ImageContainer src={PRIME_HEADLINE_SVG} alt="PRIME HEADLINE" />
           )}
           {props.data.type === 'MULTIMEDIA' && (
-            <img src={MULTIMEDIA_HEADLINE_SVG} alt="MULTIMEDIA HEADLINE" />
+            <ImageContainer
+              src={MULTIMEDIA_HEADLINE_SVG}
+              alt="MULTIMEDIA HEADLINE"
+            />
           )}
         </SectionHeader>
-        <BannerAd data={props.data} />
         {props.data.content[0].type === 'paragraph' ? (
           <SectionCaption> {props.data.content[0].content}</SectionCaption>
         ) : null}
         <Grid size={props.data.content.length}>{articles}</Grid>
+        {/* <BannerAd data={props.data} /> */}
       </SectionContainer>
     )
   }

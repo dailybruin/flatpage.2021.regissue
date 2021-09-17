@@ -1,18 +1,19 @@
 import styled from 'styled-components'
-import { mediaQueries } from '../../shared/config'
+import { mediaQueries, fonts } from '../../shared/config'
 
 export const Article = styled.div`
   min-height: 10vh;
   height: 40vh;
   display: block;
+  background-color: ${({ color }) => color};
 
   ${mediaQueries.tablet} {
     width: 35vw;
     height: 25vh;
   }
   ${mediaQueries.mobile} {
-    width: 60vw;
-    height: 40vh;
+    width: 80vw;
+    height: 45vh;
   }
   border: 4px solid black;
   margin: 0 auto;
@@ -31,9 +32,8 @@ export const ArticleImage = styled.img`
 `
 
 export const FlexDiv10 = styled.div`
-  padding: 0.5vh 0.5vw;
-  min-height: 10%;
-  height: auto;
+  padding: 0vh 0.5vw;
+  height: 15%;
   border-top: 4px solid black;
   border-bottom: 4px solid black;
   box-sizing: border-box;
@@ -42,15 +42,16 @@ export const FlexDiv10 = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 1.4vw;
-
-  font-family: Bebas Neue;
+  overflow: scroll;
+  line-height: 90%;
+  font-family: ${fonts.photo_credit};
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0em;
   /* text-align: center; */
 
   ${mediaQueries.tablet} {
-    font-size: 2.2vw;
+    font-size: 2vw;
   }
   ${mediaQueries.mobile} {
     font-size: 4vw;
@@ -58,23 +59,21 @@ export const FlexDiv10 = styled.div`
 `
 
 export const FlexDiv15 = styled.div`
-  padding: 0.5vh 0.5vw;
-  min-height: 22%;
-  height: auto;
-  background-color: ${({ color }) => color};
+  padding: 0vh 0.5vw;
+  height: 20%;
   box-sizing: border-box;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.2vw;
-  font-family: Karla;
+  font-family: ${fonts.story_headline};
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0em;
   z-index: 1;
 
-  /* overflow: scroll; */
+  overflow: scroll;
   /* text-align: center; */
   /* justify-items: center; */
 
@@ -86,7 +85,7 @@ export const FlexDiv15 = styled.div`
   ${mediaQueries.mobile} {
     font-size: 4vw;
     padding: 0 0;
-    min-height: 24%;
+    min-height: 20%;
   }
 `
 
