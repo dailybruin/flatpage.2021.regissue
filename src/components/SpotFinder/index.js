@@ -217,7 +217,7 @@ const SpotFinder = () => {
                 />}
             <div className='left-side'>
                 <div className="title-box">
-                    <p className="title">What UCLA study spot is best for you?</p>
+                    <p className="title">Which UCLA study spot is best for you?</p>
                     <p className="explainer">Are you looking for the perfect spot to study on or around campus? Answer the questions below to see which places match your preferences. Our recommendations include study spots on campus, on the Hill and in Westwood. Click the “Show All” button at any time to look through all of our study spot picks.</p>
                 </div>
                 <div className="question-box">
