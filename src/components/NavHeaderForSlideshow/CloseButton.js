@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { withRouter } from 'react-router-dom';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import { withRouter } from 'react-router-dom'
 
-import { mediaQueries } from '../../shared/config';
+import { mediaQueries } from '../../shared/config'
 
-const yellow = '#f2d851';
-const lightYellow = '#f9efb9';
+const yellow = '#f2d851'
+const lightYellow = '#f9efb9'
 
 const StyledButton = styled.button`
   cursor: pointer;
@@ -19,6 +19,7 @@ const StyledButton = styled.button`
     transition: 0.3s;
     &:hover {
       background: ${lightYellow};
+      cursor: pointer;
     }
   }
   ${mediaQueries.mobile} {
@@ -42,21 +43,21 @@ const StyledButton = styled.button`
   padding-right: 10px;
 
   line-height: 28px;
-`;
+`
 const CloseButton = (props) => {
   return (
     <StyledButton
-      onClick={() =>{
-        props.history.push("/home")
+      onClick={() => {
+        props.history.push('/home')
       }}
     >
       X
     </StyledButton>
-  );
-};
+  )
+}
 
 CloseButton.propTypes = {
   history: PropTypes.object,
-};
+}
 
-export default withRouter(CloseButton);
+export default withRouter(CloseButton)

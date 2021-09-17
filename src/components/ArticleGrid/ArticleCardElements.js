@@ -46,7 +46,7 @@ export const FlexDiv10 = styled.div`
   line-height: 90%;
   font-family: ${fonts.photo_credit};
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   letter-spacing: 0em;
   /* text-align: center; */
 
@@ -67,9 +67,10 @@ export const FlexDiv15 = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 1.2vw;
+  color: black;
   font-family: ${fonts.story_headline};
   font-style: normal;
-  font-weight: 700;
+  font-weight: normal;
   letter-spacing: 0em;
   z-index: 1;
 

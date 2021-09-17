@@ -2,19 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import { mediaQueries, colors } from "../../shared/config";
+import { mediaQueries, colors } from '../../shared/config'
 
 const StyledButton = styled.button`
   min-height: 40px;
   max-height: 80px;
   border: 1px solid black;
 
-  background: ${props => props.highlight ? colors.yellow : colors.bg};
+  background: ${(props) => (props.highlight ? colors.yellow : colors.bg)};
   ${mediaQueries.notTablet} {
-    border-left: ${props => props.first ? "1px solid black" : "0"};
+    border-left: ${(props) => (props.first ? '1px solid black' : '0')};
     transition: 0.3s;
     &:hover {
       background: white;
+      cursor: pointer;
     }
   }
   ${mediaQueries.tablet} {
@@ -49,8 +50,9 @@ const NavButton = (props) => {
       onClick={() => {
         const target = document.getElementById(props.sectionId)
         if (target) {
-          const top = target.getBoundingClientRect().top + window.pageYOffset - 100;
-          window.scrollTo({ top, behavior: "smooth" })
+          const top =
+            target.getBoundingClientRect().top + window.pageYOffset - 100
+          window.scrollTo({ top, behavior: 'smooth' })
         }
       }}
     >
@@ -63,7 +65,7 @@ NavButton.propTypes = {
   first: PropTypes.bool,
   sectionName: PropTypes.string.isRequired,
   sectionId: PropTypes.string.isRequired,
-  highlight: PropTypes.bool
+  highlight: PropTypes.bool,
 }
 
 export default NavButton
