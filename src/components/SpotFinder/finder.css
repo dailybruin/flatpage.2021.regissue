@@ -131,7 +131,7 @@
     background-color: gray;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 900px) {
     .left-side {
         width: calc(100% - 525px);
         border-right: 4px solid #000000;
@@ -139,6 +139,7 @@
     }
     .title {
         font-size: 30px;
+        line-height: 35px;
     }
     .explainer{
         font-size: 16px;
@@ -162,14 +163,20 @@
     .bottom-box {
         height: 8%;
         overflow-y: scroll;
-        font-size: xx-small;
+        line-height: 15px;
     }
     .title-box {
         height: 33%;
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1005px) and (min-width: 900px) {
+    .bottom-box {
+        font-size: xx-small;
+    }
+}
+
+@media only screen and (max-width: 900px) {
     .image-container {
         display: none;
     }
@@ -188,6 +195,13 @@
     }
     .button {
         font-size: 12px;
+    }
+    .answer-2 {
+        width: 45%;
+    }
+    .answer-2-color {
+        width: 45%;
+        background-color: #7CC4A6;
     }
     .answer-3 {
         width: 30%;
