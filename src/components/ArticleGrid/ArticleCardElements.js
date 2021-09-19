@@ -32,7 +32,7 @@ export const ArticleImage = styled.img`
 `
 
 export const FlexDiv10 = styled.div`
-  padding: 0vh 0.5vw;
+  padding: 15px 0.5vw;
   height: 15%;
   border-top: 4px solid black;
   border-bottom: 4px solid black;
@@ -41,8 +41,8 @@ export const FlexDiv10 = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4vw;
-  overflow: scroll;
+  font-size: 1vw;
+  /* overflow: scroll; */
   line-height: 90%;
   font-family: ${fonts.photo_credit};
   font-style: normal;
@@ -61,6 +61,7 @@ export const FlexDiv10 = styled.div`
 export const FlexDiv15 = styled.div`
   padding: 0vh 0.5vw;
   height: 20%;
+  line-height: 90%;
   box-sizing: border-box;
   border-radius: 5px;
   display: flex;
@@ -70,11 +71,10 @@ export const FlexDiv15 = styled.div`
   color: black;
   font-family: ${fonts.story_headline};
   font-style: normal;
-  font-weight: normal;
+  font-weight: 700;
   letter-spacing: 0em;
   z-index: 1;
-
-  overflow: scroll;
+  /* overflow: scroll; */
   /* text-align: center; */
   /* justify-items: center; */
 
@@ -82,11 +82,13 @@ export const FlexDiv15 = styled.div`
     font-size: 1.7vw;
     padding: 0 0;
     min-height: 18%;
+    line-height: 100%;
   }
   ${mediaQueries.mobile} {
     font-size: 4vw;
     padding: 0 0;
     min-height: 20%;
+    line-height: 100%;
   }
 `
 

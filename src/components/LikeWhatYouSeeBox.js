@@ -69,7 +69,7 @@ export default function LikeWhatYouSeeBox(){
                 <TextBox>
                     Apply for a Daily Bruin internship now at
                 </TextBox>
-                <Anchor href="apply.uclastudentmedia.com">
+                <Anchor href="https://apply.uclastudentmedia.com">
                 <TextBox>
                     apply.uclastudentmedia.com
                 </TextBox>

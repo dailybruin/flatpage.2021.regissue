@@ -21,7 +21,7 @@ export const SectionHeader = styled.div`
   margin-left: auto;
   margin-right: auto;
   text-transform: uppercase;
-  font-family: ${fonts.section_headline};
+  font-family: 'Amiri', serif;;
   font-style: normal;
   font-weight: normal;
   font-size: 1em;
@@ -53,7 +53,8 @@ export const SectionHeaderOutline = styled.div`
   margin-left: auto;
   margin-right: auto;
   text-transform: uppercase;
-  font-family: ${fonts.section_headline};
+  font-family: 'Amiri', serif;;
+  font-weight: 700;
   font-style: normal;
   font-weight: normal;
   font-size: 1em;

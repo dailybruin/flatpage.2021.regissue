@@ -51,7 +51,7 @@ const NavButton = (props) => {
         const target = document.getElementById(props.sectionId)
         if (target) {
           const top =
-            target.getBoundingClientRect().top + window.pageYOffset - 100
+            target.getBoundingClientRect().top + window.pageYOffset - 150
           window.scrollTo({ top, behavior: 'smooth' })
         }
       }}

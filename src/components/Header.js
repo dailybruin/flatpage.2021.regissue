@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <DBHeader>
       {/* Daily Bruin */}
-      <a href="https://apply.uclastudentmedia.com">
+      <a href="https://dailybruin.com">
         <img src={DBLogo} alt="Daily Bruin" />
       </a>
     </DBHeader>

@@ -41,7 +41,7 @@ export const fonts = {
   passport_body: 'Prompt',
   apply: 'American Typewriter',
   passport_headline: 'American Typewriter',
-  story_headline: 'American Typewriter',
+  story_headline: 'Amiri',
   section_headline: 'Amiri',
 }
 
